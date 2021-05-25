@@ -1,0 +1,277 @@
+C:\Users\Sony\documents\visual studio 2010\Projects\prjGrow\prjGrow\bin\Debug\prjGrow.exe
+C:\Users\Sony\documents\visual studio 2010\Projects\prjGrow\prjGrow\bin\Debug\prjGrow.pdb
+C:\Users\Sony\documents\visual studio 2010\Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Form1.resources
+C:\Users\Sony\documents\visual studio 2010\Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.General.frmBaseGeneral.resources
+C:\Users\Sony\documents\visual studio 2010\Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Properties.Resources.resources
+C:\Users\Sony\documents\visual studio 2010\Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.csproj.GenerateResource.Cache
+C:\Users\Sony\documents\visual studio 2010\Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.exe
+C:\Users\Sony\documents\visual studio 2010\Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.pdb
+D:\Development\GrowPos\prjGrow\bin\Debug\prjGrow.exe
+D:\Development\GrowPos\prjGrow\bin\Debug\prjGrow.pdb
+D:\Development\GrowPos\prjGrow\obj\x86\Debug\prjGrow.frmDashboard.resources
+D:\Development\GrowPos\prjGrow\obj\x86\Debug\prjGrow.General.frmBank.resources
+D:\Development\GrowPos\prjGrow\obj\x86\Debug\prjGrow.General.frmBaseGeneral.resources
+D:\Development\GrowPos\prjGrow\obj\x86\Debug\prjGrow.General.frmBaseSimple.resources
+D:\Development\GrowPos\prjGrow\obj\x86\Debug\prjGrow.Properties.Resources.resources
+D:\Development\GrowPos\prjGrow\obj\x86\Debug\prjGrow.Stock.frmBaseReport.resources
+D:\Development\GrowPos\prjGrow\obj\x86\Debug\prjGrow.Stock.frmBaseSalePur.resources
+D:\Development\GrowPos\prjGrow\obj\x86\Debug\prjGrow.Stock.frmSale.resources
+D:\Development\GrowPos\prjGrow\obj\x86\Debug\prjGrow.Users.frmBaseUsers.resources
+D:\Development\GrowPos\prjGrow\obj\x86\Debug\prjGrow.csproj.GenerateResource.Cache
+D:\Development\GrowPos\prjGrow\obj\x86\Debug\prjGrow.exe
+D:\Development\GrowPos\prjGrow\obj\x86\Debug\prjGrow.pdb
+G:\Current Projects\prjGrow\prjGrow\bin\Debug\prjGrow.exe.config
+G:\Current Projects\prjGrow\prjGrow\bin\Debug\prjGrow.exe
+G:\Current Projects\prjGrow\prjGrow\bin\Debug\prjGrow.pdb
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.csprojResolveAssemblyReference.cache
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Accounts.frmBankTran.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Accounts.frmBaseAccounts.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Accounts.frmCoa.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Accounts.frmCustomerTran.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Accounts.frmDrawInvest.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Accounts.frmExpense.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Accounts.frmSupplierTran.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.frmDashboard.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.General.frmBank.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.General.frmBaseGeneral.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.General.frmBaseSimple.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.General.frmCustomer.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.General.frmEmp.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.General.frmEmpAtend.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.General.frmProducts.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.General.frmSuplier.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Manufacture.frmBaseComplex.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Manufacture.frmLabour.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Manufacture.frmOrders.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Manufacture.frmProcess.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Properties.Resources.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmAtendRep.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmBnkLed.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmDayBook.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmExpiryRep.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmExpLedger.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmTrialBal.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reports.frmCashbook.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmBaseReport.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmBaseReportSimple.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmCusLed.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmDisplayRep.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmJournal.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmProfitLoss.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmPurRep.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmSaleRep.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmStockRep.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmSupLed.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.StockInfo.frmBaseSalePur.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.StockInfo.frmDamage.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.StockInfo.frmPurchase.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.StockInfo.frmPurchaseReview.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.StockInfo.frmSale.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.StockInfo.frmSaleReview.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Users.frmBaseUsers.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Users.frmChangePass.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Users.frmlogin.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Users.frmUserInfo.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.csproj.GenerateResource.Cache
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.exe
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.pdb
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Accounts.frmEmpTran.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.General.frmExpType.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.General.frmProductType.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmEmpLed.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.StockInfo.frmInbound.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Manufacture.frmOrderReview.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.StockInfo.frmIMEI.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.StockInfo.frmShortStock.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmShortStockRep.resources
+G:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Users.frmBackup.resources
+D:\Development\prjGrow\prjGrow\bin\Debug\prjGrow.exe.config
+D:\Development\prjGrow\prjGrow\bin\Debug\prjGrow.exe
+D:\Development\prjGrow\prjGrow\bin\Debug\prjGrow.pdb
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Accounts.frmBankTran.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Accounts.frmBaseAccounts.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Accounts.frmCoa.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Accounts.frmCustomerTran.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Accounts.frmDrawInvest.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Accounts.frmEmpTran.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Accounts.frmExpense.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Accounts.frmSupplierTran.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Fnb.frmPlaceOrder.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Fnb.frmTable.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.frmDashboard.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.General.frmAddClient.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.General.frmAssets.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.General.frmBank.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.General.frmBaseGeneral.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.General.frmBaseMicro.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.General.frmBaseSimple.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.General.frmCustomer.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.General.frmEmp.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.General.frmEmpAtend.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.General.frmExpType.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.General.frmProducts.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.General.frmProductType.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.General.frmSuplier.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.General.frmVeh.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Manufacture.frmBaseComplex.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Manufacture.frmDelivery.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Manufacture.frmLabour.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Manufacture.frmAutoConsume.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Manufacture.frmOrderReview.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Manufacture.frmOrders.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Manufacture.frmProcess.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Manufacture.frmProcessReview.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Manufacture.frmProduction.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Manufacture.frmProgress.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Properties.Resources.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmAtendRep.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmBalSheet.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmBnkLed.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmCashflow.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmConsumeRep.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmCusVisitSummary.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmDayBook.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmEmpLed.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmExpiryRep.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmExpLedger.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmImeiRep.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmInboundRep.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmOrderRepAct.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmPriceList.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmProductionReport.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmSaleReceipt.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmSaleSummary.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmShortStockRep.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmTrialBal.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reports.frmCashbook.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmBaseReport.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmBaseReportSimple.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmCusLed.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmDisplayRep.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmJournal.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmProfitLoss.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmPurRep.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmSaleRep.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmStockRep.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmSupLed.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.StockInfo.frmTmp.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.StockInfo.frmAssetPurchase.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.StockInfo.frmBarcodeGen.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.StockInfo.frmBaseSalePur.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.StockInfo.frmComp.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.StockInfo.frmDamage.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.StockInfo.frmIMEI.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.StockInfo.frmInbound.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.StockInfo.frmPurchase.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.StockInfo.frmPurchaseReview.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.StockInfo.frmSale.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.StockInfo.frmSaleReview.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.StockInfo.frmShortStock.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.StockInfo.frmStockInOut.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Users.frmBackup.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Users.frmBaseUsers.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Users.frmChangePass.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Users.frmlogin.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Users.frmUserInfo.resources
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.csproj.GenerateResource.Cache
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.exe
+D:\Development\prjGrow\prjGrow\obj\x86\Debug\prjGrow.pdb
+E:\Current Projects\prjGrow\prjGrow\bin\Debug\prjGrow.exe.config
+E:\Current Projects\prjGrow\prjGrow\bin\Debug\prjGrow.exe
+E:\Current Projects\prjGrow\prjGrow\bin\Debug\prjGrow.pdb
+E:\Current Projects\prjGrow\prjGrow\bin\Debug\OnBarcode.Barcode.WinForms.dll
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Accounts.frmAddCheque.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Accounts.frmBankTran.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Accounts.frmBaseAccounts.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Accounts.frmCheques.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Accounts.frmCoa.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Accounts.frmCustomerTran.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Accounts.frmDrawInvest.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Accounts.frmEmpTran.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Accounts.frmExpense.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Accounts.frmSupplierTran.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Fnb.frmPlaceOrder.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Fnb.frmTable.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.frmDashboard.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.General.frmAddClient.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.General.frmAssets.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.General.frmBank.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.General.frmBaseGeneral.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.General.frmBaseMicro.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.General.frmBaseSimple.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.General.frmCustomer.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.General.frmEmp.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.General.frmEmpAtend.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.General.frmExpType.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.General.frmProducts.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.General.frmProductType.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.General.frmSuplier.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.General.frmVeh.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Manufacture.frmBaseComplex.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Manufacture.frmConsume.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Manufacture.frmDelivery.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Manufacture.frmLabour.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Manufacture.frmAutoConsume.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Manufacture.frmOrderReview.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Manufacture.frmOrders.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Manufacture.frmProcess.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Manufacture.frmProcessReview.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Manufacture.frmProduction.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Manufacture.frmProgress.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Properties.Resources.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmAtendRep.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmBalSheet.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmBnkLed.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmCashflow.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmConsumeRep.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmCusVisitSummary.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmDayBook.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmEmpLed.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmExpiryRep.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmExpLedger.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmImeiRep.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmInboundRep.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmOrderRepAct.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmPriceList.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmProductionReport.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmSaleReceipt.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmSaleSummary.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmShortStockRep.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmTrialBal.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reports.frmCashbook.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmBaseReport.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmBaseReportSimple.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmCusLed.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmDisplayRep.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmJournal.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmProfitLoss.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmPurRep.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmSaleRep.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmStockRep.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmSupLed.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.StockInfo.frmTmp.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.StockInfo.frmAssetPurchase.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.StockInfo.frmBarcodeGen.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.StockInfo.frmBaseSalePur.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.StockInfo.frmComp.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.StockInfo.frmDamage.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.StockInfo.frmIMEI.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.StockInfo.frmInbound.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.StockInfo.frmPurchase.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.StockInfo.frmPurchaseReview.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.StockInfo.frmSale.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.StockInfo.frmSaleReview.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.StockInfo.frmShortStock.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.StockInfo.frmStockInOut.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Users.frmBackup.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Users.frmBaseUsers.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Users.frmChangePass.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Users.frmlogin.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Users.frmUserInfo.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.csproj.GenerateResource.Cache
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.exe
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.pdb
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.StockInfo.frmSupplierOrders.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmSupOrder.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.csprojResolveAssemblyReference.cache
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.General.frmAutoDis.resources
