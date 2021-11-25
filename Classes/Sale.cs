@@ -57,7 +57,7 @@ namespace prjGrow.Classes
         Link_prod lnk = new Link_prod();
 
         public DataTable tblRaw = null;
-        
+
         public void getAccIds()
         {
             sale_ref_id = db.getNextId("Sale");

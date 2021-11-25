@@ -143,20 +143,10 @@ namespace prjGrow.StockInfo
             com.filterData(txtSrh.Text, Product.col_prod_name, prod.tblData);
         }
 
-        private void lblMsg_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnReport_Click(object sender, EventArgs e)
         {
             frmShortStockRep rpt = new frmShortStockRep();
             rpt.ShowDialog();
-        }
-
-        private void lblClient_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

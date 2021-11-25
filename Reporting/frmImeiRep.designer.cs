@@ -68,6 +68,7 @@
             this.txtIMEI.Size = new System.Drawing.Size(254, 26);
             this.txtIMEI.TabIndex = 1;
             this.txtIMEI.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtIMEI.TextChanged += new System.EventHandler(this.txtIMEI_TextChanged);
             this.txtIMEI.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtIMEI_KeyDown);
             // 
             // label5
@@ -100,7 +101,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(753, 401);
+            this.ClientSize = new System.Drawing.Size(544, 239);
             this.Controls.Add(this.dgvData);
             this.Controls.Add(this.txtIMEI);
             this.Controls.Add(this.label5);

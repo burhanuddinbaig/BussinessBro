@@ -23,12 +23,12 @@ namespace prjGrow.Fnb
         DataTable tblTbl;
         DataTable tblProd;
         DataTable tblCus;
-        
+
         clsTable tbl = new clsTable();
         Product prod = new Product();
         Foodnb fnb = new Foodnb();
         Customer cus = new Customer();
-        
+
         bool loading = false;
         Common com = new Common();
         int count = 0;
@@ -136,7 +136,7 @@ namespace prjGrow.Fnb
             else
                 fpnlTbl.Controls[x + 1].Text = tmpName;
         }
-        
+
         void clearValues()
         {
             fnb.bill_amt = 0;
@@ -189,7 +189,7 @@ namespace prjGrow.Fnb
             qtyDash = Convert.ToInt32(row[Product.col_stock]) - Convert.ToInt32(objTmp) - (int)fnb.dish_qty;
             btn.Text = fnb.dish_name + "(" + qtyDash + ")";
         }
-        
+
         void addToBill(Button btn)
         {
             fnb.prod_id = btn.TabIndex;
@@ -442,7 +442,7 @@ namespace prjGrow.Fnb
             if (string.IsNullOrEmpty(cmbClient.Text))
                 numClientBal.Value = 0;
         }
-        
+
         private void dgvPending_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0)

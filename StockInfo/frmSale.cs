@@ -144,17 +144,38 @@ namespace prjGrow.StockInfo
 
             if (rbRetail.Checked)
             {
-                com.hideColumns(dgvData, new string[] { Product.col_prod_id, Product.col_cost, Sale.col_frieght, Product.col_whole, Product.col_cate, Product.col_min_stock, "Remove"});
+                com.hideColumns(dgvData, new string[] { Product.col_prod_id, Product.col_cost, Sale.col_frieght, Product.col_whole, Product.col_cate, Product.col_min_stock, "Remove" });
                 com.showColumns(dgvData, new string[] { Product.col_retail, Product.col_stock });
             }
             else if (rbWhole.Checked)
             {
-                com.hideColumns(dgvData, new string[] { Product.col_prod_id, Product.col_cost, Sale.col_frieght, Product.col_retail, Product.col_cate, Product.col_min_stock, "Remove"});
+                com.hideColumns(dgvData, new string[] { Product.col_prod_id, Product.col_cost, Sale.col_frieght, Product.col_retail, Product.col_cate, Product.col_min_stock, "Remove" });
                 com.showColumns(dgvData, new string[] { Product.col_whole, Product.col_stock });
             }
 
             if (Custom.client_id_active == 5 || Custom.client_id_active == 3)
-                com.hideColumns(dgvData, new string[] {Product.col_unit});
+                com.hideColumns(dgvData, new string[] { Product.col_unit });
+            if (Custom.client_id_active == 2)
+                com.enableColumns(dgvData, new string[] { Product.col_stock }, User.curAuth == Constants.auth_admin);
+        }
+
+        void showProducts()
+        {
+            dgvData.DataSource = sale.tblProducts;
+
+            if (rbRetail.Checked)
+            {
+                com.hideColumns(dgvData, new string[] { Product.col_prod_id, Product.col_cost, Sale.col_frieght, Product.col_whole, Product.col_cate, Product.col_min_stock, "Remove" });
+                com.showColumns(dgvData, new string[] { Product.col_retail, Product.col_stock });
+            }
+            else if (rbWhole.Checked)
+            {
+                com.hideColumns(dgvData, new string[] { Product.col_prod_id, Product.col_cost, Sale.col_frieght, Product.col_retail, Product.col_cate, Product.col_min_stock, "Remove" });
+                com.showColumns(dgvData, new string[] { Product.col_whole, Product.col_stock });
+            }
+
+            if (Custom.client_id_active == 5 || Custom.client_id_active == 3)
+                com.hideColumns(dgvData, new string[] { Product.col_unit });
             if (Custom.client_id_active == 2)
                 com.enableColumns(dgvData, new string[] { Product.col_stock }, User.curAuth == Constants.auth_admin);
         }
@@ -259,7 +280,7 @@ namespace prjGrow.StockInfo
             else
                 sale.bank_id = 0;
 
-            if (sale.tblOrders.Rows.Count > 0)
+                if (sale.tblOrders.Rows.Count > 0)
             {
                 sale.discount += Convert.ToInt32(sale.tblOrders.Compute("Sum(" + Sale.col_discount + ")", "").ToString());
                 
@@ -333,15 +354,15 @@ namespace prjGrow.StockInfo
                     {
                         tmpCost = (float)Convert.ToDouble(sale.tblCart.Rows[i][Product.col_cost].ToString());
                         tmpCost += tmpFrt;
-                        if ((tmpPrice - tmpDist <= tmpCost) && !(Custom.client_id_active == 7))
+                        if (((tmpPrice * tmpQty) - tmpDist <= (tmpCost * tmpQty)) && !(Custom.client_id_active == 7))
                         {
                             tmpDist = 0;
-                            sale.tblCart.Rows[i][Product.col_price] = Math.Round(tmpCost, 2);
+                            sale.tblCart.Rows[i][Product.col_price] = Math.Round(tmpPrice, 2);
                             sale.tblCart.Rows[i][Sale.col_item_dist] = 0;
-                            tmpPrice = tmpCost;
+                        //    tmpPrice = tmpCost;
                         }
                     }
-                    sale.tblCart.Rows[i][Product.col_amount] = Custom.fet_item_dist ? (tmpQty * (tmpPrice - tmpDist)) : tmpQty * tmpPrice;
+                    sale.tblCart.Rows[i][Product.col_amount] = Custom.fet_item_dist ? ((tmpQty * tmpPrice) - tmpDist) : tmpQty * tmpPrice;
                     float tmpStock = (float)Convert.ToDouble(sale.tblCart.Rows[i][Product.col_stock].ToString());
 
                     if (Custom.client_id_active == 5 || Custom.client_id_active == 6 || Custom.client_id_active == 2)
@@ -377,17 +398,18 @@ namespace prjGrow.StockInfo
             if (Custom.fet_item_dist && sale.tblCart.Rows.Count > 0)
             {
                 sale.discount = Convert.ToInt32(sale.tblCart.Compute("Sum(" + Sale.col_item_dist + ")", ""));
+                sale.total += sale.discount;                    //to add discount to total
                 numDiscount.Value = sale.discount;
             }
             else
                 sale.discount = Convert.ToInt32(numDiscount.Value) < Convert.ToInt64(numBillTotal.Value) ? Convert.ToInt32(numDiscount.Value) : 0;
 
-            sale.amount = Custom.fet_item_dist ? sale.total : sale.total - sale.discount;
+            sale.amount = sale.total - sale.discount;
             numAmt.Value = sale.amount;
             sale.paid = sale.amount - Convert.ToInt32(numPaid.Value) <= 0 ? sale.amount : Convert.ToInt32(numPaid.Value);
             
-            loading = true;
-            numBillTotal.Value = Custom.fet_item_dist ? sale.total + sale.discount : sale.total;
+            loading = true; 
+            numBillTotal.Value = sale.total;
             loading = false;
 
             if (cmbClient.SelectedIndex >= 0)
@@ -747,11 +769,14 @@ namespace prjGrow.StockInfo
         {
             if (loading)
                 return;
-            if (txtProdName.Text == "")// && sale.tblCart.Rows.Count > 0
+            string str = txtProdName.Text;
+            if (str.Length == 1)
+                return;
+            if (str == "")// && sale.tblCart.Rows.Count > 0
                 showCart();
-            else if (dgvData.DataSource == sale.tblCart)
+            else if (dgvData.DataSource == sale.tblCart && str.Length > 1)
             {
-                loadProducts();
+                showProducts();
             }
             else
                 com.filterData(txtProdName.Text, Product.col_prod_name, dgvData, sale.tblProducts);
@@ -899,6 +924,7 @@ namespace prjGrow.StockInfo
             frmProducts frmProd = new frmProducts();
             frmProd.ShowDialog();
             loadProducts();
+            showProducts();
         }
 
         private void btnClient_Click(object sender, EventArgs e)
@@ -1027,7 +1053,7 @@ namespace prjGrow.StockInfo
         {
             this.Close();
         }
-
+        
         private void cmbVeh_SelectedValueChanged(object sender, EventArgs e)
         {
             loading = true;
@@ -1067,7 +1093,7 @@ namespace prjGrow.StockInfo
             pur.ShowDialog();
             loadProducts();
         }
-
+        
         private void btnSp1_Click(object sender, EventArgs e)
         {
             addProdtoCart(Constants.code_bag_sm);
@@ -1162,7 +1188,6 @@ namespace prjGrow.StockInfo
             if (sale.tran_id > 0)
                 sale.printBill();
         }
-        #endregion
 
         private void chkBill_CheckedChanged(object sender, EventArgs e)
         {
@@ -1180,8 +1205,10 @@ namespace prjGrow.StockInfo
             if (e.ColumnIndex < 0 || e.RowIndex < 0)
                 return;
 
-            if(dgvData.Columns[e.ColumnIndex].Name == Product.col_price && dgvData.Columns["Remove"].Visible && dgvData.Rows.Count > 0)
+            if (dgvData.Columns[e.ColumnIndex].Name == Product.col_price && dgvData.Columns["Remove"].Visible && dgvData.Rows.Count > 0)
                 flipPrice(sale.tblCart.Rows.Count - e.RowIndex - 1);
         }
+
+        #endregion
     }
 }

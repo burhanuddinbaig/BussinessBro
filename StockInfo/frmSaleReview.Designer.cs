@@ -332,7 +332,6 @@
             0,
             0,
             0});
-            this.numYear.ValueChanged += new System.EventHandler(this.numYear_ValueChanged);
             // 
             // cmbMonth
             // 
@@ -354,7 +353,6 @@
             this.cmbMonth.Name = "cmbMonth";
             this.cmbMonth.Size = new System.Drawing.Size(80, 32);
             this.cmbMonth.TabIndex = 5;
-            this.cmbMonth.SelectedIndexChanged += new System.EventHandler(this.cmbMonth_SelectedIndexChanged);
             // 
             // cmbProdSrh
             // 
@@ -364,7 +362,6 @@
             this.cmbProdSrh.Name = "cmbProdSrh";
             this.cmbProdSrh.Size = new System.Drawing.Size(200, 32);
             this.cmbProdSrh.TabIndex = 4;
-            this.cmbProdSrh.SelectedIndexChanged += new System.EventHandler(this.cmbProdSrh_SelectedIndexChanged);
             this.cmbProdSrh.SelectedValueChanged += new System.EventHandler(this.cmbProdSrh_SelectedValueChanged);
             // 
             // label22
@@ -376,7 +373,6 @@
             this.label22.Size = new System.Drawing.Size(131, 24);
             this.label22.TabIndex = 77;
             this.label22.Text = "Product Name";
-            this.label22.Click += new System.EventHandler(this.label22_Click);
             // 
             // btnDateSrh
             // 
@@ -460,7 +456,7 @@
             // btnDelete
             // 
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(36, 433);
+            this.btnDelete.Location = new System.Drawing.Point(34, 433);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(211, 40);
@@ -711,6 +707,7 @@
             this.dgvData.Size = new System.Drawing.Size(991, 257);
             this.dgvData.TabIndex = 87;
             this.dgvData.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellClick);
+            this.dgvData.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellEndEdit);
             this.dgvData.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dgvData_RowsRemoved);
             // 
             // Return
@@ -745,7 +742,7 @@
             // btnPrint
             // 
             this.btnPrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrint.Location = new System.Drawing.Point(36, 390);
+            this.btnPrint.Location = new System.Drawing.Point(34, 390);
             this.btnPrint.Margin = new System.Windows.Forms.Padding(4);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(211, 40);
@@ -783,7 +780,7 @@
             // 
             this.numRefund.Enabled = false;
             this.numRefund.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numRefund.Location = new System.Drawing.Point(36, 22);
+            this.numRefund.Location = new System.Drawing.Point(34, 22);
             this.numRefund.Margin = new System.Windows.Forms.Padding(4);
             this.numRefund.Maximum = new decimal(new int[] {
             99999,
@@ -801,7 +798,7 @@
             this.lblRefund.AutoSize = true;
             this.lblRefund.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRefund.ForeColor = System.Drawing.Color.Transparent;
-            this.lblRefund.Location = new System.Drawing.Point(34, 3);
+            this.lblRefund.Location = new System.Drawing.Point(32, 3);
             this.lblRefund.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRefund.Name = "lblRefund";
             this.lblRefund.Size = new System.Drawing.Size(73, 20);
@@ -820,7 +817,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(36, 476);
+            this.button1.Location = new System.Drawing.Point(34, 476);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(211, 40);
@@ -832,7 +829,7 @@
             // btnReview
             // 
             this.btnReview.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReview.Location = new System.Drawing.Point(36, 346);
+            this.btnReview.Location = new System.Drawing.Point(34, 346);
             this.btnReview.Margin = new System.Windows.Forms.Padding(4);
             this.btnReview.Name = "btnReview";
             this.btnReview.Size = new System.Drawing.Size(211, 40);
@@ -844,7 +841,7 @@
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(36, 303);
+            this.btnSave.Location = new System.Drawing.Point(34, 303);
             this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(211, 40);
@@ -857,7 +854,7 @@
             // 
             this.numCredit.Enabled = false;
             this.numCredit.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numCredit.Location = new System.Drawing.Point(36, 259);
+            this.numCredit.Location = new System.Drawing.Point(34, 259);
             this.numCredit.Margin = new System.Windows.Forms.Padding(4);
             this.numCredit.Maximum = new decimal(new int[] {
             999999,
@@ -869,14 +866,13 @@
             this.numCredit.TabIndex = 101;
             this.numCredit.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numCredit.ThousandsSeparator = true;
-            this.numCredit.ValueChanged += new System.EventHandler(this.numCredit_ValueChanged);
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Transparent;
-            this.label13.Location = new System.Drawing.Point(30, 239);
+            this.label13.Location = new System.Drawing.Point(28, 239);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(169, 20);
@@ -887,7 +883,7 @@
             // 
             this.numBillTotal.Enabled = false;
             this.numBillTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numBillTotal.Location = new System.Drawing.Point(36, 88);
+            this.numBillTotal.Location = new System.Drawing.Point(34, 88);
             this.numBillTotal.Margin = new System.Windows.Forms.Padding(4);
             this.numBillTotal.Maximum = new decimal(new int[] {
             999999,
@@ -899,14 +895,13 @@
             this.numBillTotal.TabIndex = 98;
             this.numBillTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numBillTotal.ThousandsSeparator = true;
-            this.numBillTotal.ValueChanged += new System.EventHandler(this.numBillTotal_ValueChanged);
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.Transparent;
-            this.label17.Location = new System.Drawing.Point(34, 66);
+            this.label17.Location = new System.Drawing.Point(32, 66);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(83, 20);
@@ -916,7 +911,7 @@
             // numDiscount
             // 
             this.numDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numDiscount.Location = new System.Drawing.Point(36, 144);
+            this.numDiscount.Location = new System.Drawing.Point(34, 144);
             this.numDiscount.Margin = new System.Windows.Forms.Padding(4);
             this.numDiscount.Maximum = new decimal(new int[] {
             99999,
@@ -935,7 +930,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Transparent;
-            this.label15.Location = new System.Drawing.Point(34, 124);
+            this.label15.Location = new System.Drawing.Point(32, 124);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(85, 20);
@@ -945,7 +940,7 @@
             // numPaid
             // 
             this.numPaid.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numPaid.Location = new System.Drawing.Point(36, 202);
+            this.numPaid.Location = new System.Drawing.Point(34, 202);
             this.numPaid.Margin = new System.Windows.Forms.Padding(4);
             this.numPaid.Maximum = new decimal(new int[] {
             999999,
@@ -957,14 +952,13 @@
             this.numPaid.TabIndex = 100;
             this.numPaid.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numPaid.ThousandsSeparator = true;
-            this.numPaid.ValueChanged += new System.EventHandler(this.numPaid_ValueChanged);
             // 
             // lblPaid
             // 
             this.lblPaid.AutoSize = true;
             this.lblPaid.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPaid.ForeColor = System.Drawing.Color.Transparent;
-            this.lblPaid.Location = new System.Drawing.Point(32, 180);
+            this.lblPaid.Location = new System.Drawing.Point(30, 180);
             this.lblPaid.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPaid.Name = "lblPaid";
             this.lblPaid.Size = new System.Drawing.Size(119, 20);

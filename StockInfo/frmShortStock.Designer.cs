@@ -56,7 +56,6 @@
             // lblMsg
             // 
             this.lblMsg.Location = new System.Drawing.Point(228, 93);
-            this.lblMsg.Click += new System.EventHandler(this.lblMsg_Click);
             // 
             // btnClose
             // 
@@ -80,7 +79,6 @@
             // 
             // lblClient
             // 
-            this.lblClient.Click += new System.EventHandler(this.lblClient_Click);
             // 
             // dgvData
             // 

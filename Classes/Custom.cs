@@ -14,7 +14,7 @@ namespace prjGrow.Classes
 
         public static bool largeScreen = false;
         public static string ip_adrs = /*"192.168.1.99";//*/".";
-        public static long client_id_active = 3;
+        public static long client_id_active = 2;
         public static string col_feat_id = "feat_id", col_status = "status";
         public static string col_full_name = "full_name", col_adrs = "address", col_cell = "cell", col_phone = "phone", col_email = "email", col_qoute = "qoute";
         string tmpStr = "";

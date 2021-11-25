@@ -126,13 +126,13 @@
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(-10, 673);
+            this.label2.Location = new System.Drawing.Point(-10, 671);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Visible = false;
             // 
             // numInvoiceno
             // 
-            this.numInvoiceno.Location = new System.Drawing.Point(73, 668);
+            this.numInvoiceno.Location = new System.Drawing.Point(73, 666);
             this.numInvoiceno.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.numInvoiceno.Size = new System.Drawing.Size(10, 29);
             this.numInvoiceno.Visible = false;
@@ -382,7 +382,7 @@
             this.btnOrder.Location = new System.Drawing.Point(586, 3);
             this.btnOrder.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.btnOrder.Name = "btnOrder";
-            this.btnOrder.Size = new System.Drawing.Size(180, 32);
+            this.btnOrder.Size = new System.Drawing.Size(180, 33);
             this.btnOrder.TabIndex = 79;
             this.btnOrder.TabStop = false;
             this.btnOrder.Text = "&Orders";
@@ -410,7 +410,7 @@
             // btnAddIMEI
             // 
             this.btnAddIMEI.Enabled = false;
-            this.btnAddIMEI.Location = new System.Drawing.Point(390, 41);
+            this.btnAddIMEI.Location = new System.Drawing.Point(390, 42);
             this.btnAddIMEI.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.btnAddIMEI.Name = "btnAddIMEI";
             this.btnAddIMEI.Size = new System.Drawing.Size(180, 32);
@@ -425,7 +425,7 @@
             // 
             this.btnDeliver.Enabled = false;
             this.btnDeliver.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeliver.Location = new System.Drawing.Point(6, 41);
+            this.btnDeliver.Location = new System.Drawing.Point(6, 42);
             this.btnDeliver.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.btnDeliver.Name = "btnDeliver";
             this.btnDeliver.Size = new System.Drawing.Size(180, 32);
@@ -458,7 +458,7 @@
             this.flpOption.Location = new System.Drawing.Point(241, 629);
             this.flpOption.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.flpOption.Name = "flpOption";
-            this.flpOption.Size = new System.Drawing.Size(840, 40);
+            this.flpOption.Size = new System.Drawing.Size(842, 40);
             this.flpOption.TabIndex = 93;
             // 
             // pnlEmp
@@ -528,7 +528,7 @@
             // 
             // btnServ
             // 
-            this.btnServ.Location = new System.Drawing.Point(198, 41);
+            this.btnServ.Location = new System.Drawing.Point(198, 42);
             this.btnServ.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.btnServ.Name = "btnServ";
             this.btnServ.Size = new System.Drawing.Size(180, 32);
@@ -541,7 +541,7 @@
             // 
             // btnPurchase
             // 
-            this.btnPurchase.Location = new System.Drawing.Point(582, 41);
+            this.btnPurchase.Location = new System.Drawing.Point(582, 42);
             this.btnPurchase.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.btnPurchase.Name = "btnPurchase";
             this.btnPurchase.Size = new System.Drawing.Size(180, 32);
@@ -554,7 +554,7 @@
             // 
             // btnSp1
             // 
-            this.btnSp1.Location = new System.Drawing.Point(6, 79);
+            this.btnSp1.Location = new System.Drawing.Point(6, 80);
             this.btnSp1.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.btnSp1.Name = "btnSp1";
             this.btnSp1.Size = new System.Drawing.Size(100, 32);
@@ -567,7 +567,7 @@
             // 
             // btnSp2
             // 
-            this.btnSp2.Location = new System.Drawing.Point(118, 79);
+            this.btnSp2.Location = new System.Drawing.Point(118, 80);
             this.btnSp2.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.btnSp2.Name = "btnSp2";
             this.btnSp2.Size = new System.Drawing.Size(100, 32);
@@ -580,7 +580,7 @@
             // 
             // btnSwitchUser
             // 
-            this.btnSwitchUser.Location = new System.Drawing.Point(230, 79);
+            this.btnSwitchUser.Location = new System.Drawing.Point(230, 80);
             this.btnSwitchUser.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.btnSwitchUser.Name = "btnSwitchUser";
             this.btnSwitchUser.Size = new System.Drawing.Size(180, 32);
@@ -592,7 +592,7 @@
             // 
             // btnSupOrder
             // 
-            this.btnSupOrder.Location = new System.Drawing.Point(422, 79);
+            this.btnSupOrder.Location = new System.Drawing.Point(422, 80);
             this.btnSupOrder.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.btnSupOrder.Name = "btnSupOrder";
             this.btnSupOrder.Size = new System.Drawing.Size(180, 32);
@@ -607,7 +607,7 @@
             // 
             this.lblCp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCp.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblCp.Location = new System.Drawing.Point(612, 76);
+            this.lblCp.Location = new System.Drawing.Point(612, 77);
             this.lblCp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCp.Name = "lblCp";
             this.lblCp.Size = new System.Drawing.Size(149, 32);

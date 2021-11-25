@@ -22,7 +22,7 @@ namespace prjGrow
 
         public void Connect()
         {
-            con = new SqlConnection("Data Source=" + Custom.ip_adrs + ";Initial Catalog=dbGrow;User Id=sa;Password=123;Integrated Security=False");
+            con = new SqlConnection("Data Source=" + Custom.ip_adrs + ";Initial Catalog=dbGrow;User Id=sa;Password=123;Integrated Security=True");
             con.Open();
         }
 
@@ -190,8 +190,6 @@ namespace prjGrow
         {
             object res = tbl.Compute("sum(" + colA + ") - sum(" + colB + ")", "");
             long bal = res.GetType() == typeof(DBNull) ? 0 : Convert.ToInt64(res);
-
-
 
             return bal;
         }
@@ -389,7 +387,6 @@ namespace prjGrow
 
         public bool dataExistIMEIs(string pid, string ime)
         {
-
             bool res = false;
             query = @"SELECT     prod_id, imei, SUM(dr) AS SumOfdr, SUM(cr) AS SumOfcr, status
                     FROM         IMEI
@@ -397,7 +394,6 @@ namespace prjGrow
                     HAVING      (SUM(dr) > SUM(cr)) AND (prod_id=" + pid + ") AND (imei = N'" + ime + "')  AND (status = " + Constants.status_active + ") ";
             res = getDataTable().Rows.Count > 0;
             return res;
-
         }
     }
 }

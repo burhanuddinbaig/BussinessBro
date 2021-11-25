@@ -31,11 +31,11 @@ namespace prjGrow
 
         private void showFrm(Form frm)
         {
-            
             if (Constants.multiple_forms)
                 frm.Show();
             else
                 frm.ShowDialog();
+        //    frm.BringToFront();
         }
 
         void processes()

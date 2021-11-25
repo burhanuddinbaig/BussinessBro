@@ -82,5 +82,10 @@ namespace prjGrow.Reporting
             txtIMEI.Text = string.Empty;
             txtIMEI.Focus();
         }
+
+        private void txtIMEI_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
