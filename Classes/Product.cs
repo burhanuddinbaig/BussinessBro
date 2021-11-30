@@ -49,9 +49,9 @@ namespace prjGrow.Classes
         {
             db.query = "select p.id as [" + col_id + "], p.prod_code as [" + col_code + "], p.prod_name as [" + col_prod_name + "]" + sqlLine;
             db.query += ", p.type as [" + col_prod_type_id + "], t.name as [" + col_prod_type + "], " + sqlLine;
-            db.query += "(select max(st.cost) from Stock st where st.id = (select max(stk.id) from Stock stk where stk.prod_id = p.id and stk.retail > 0)) as [" + col_cost + "]," + sqlLine;
-            db.query += "(select max(st.whole) from Stock st where st.id = (select max(stk.id) from Stock stk where stk.prod_id = p.id and stk.retail > 0)) as [" + col_whole + "]," + sqlLine;
-            db.query += "(select max(st.retail) from Stock st where st.id = (select max(stk.id) from Stock stk where stk.prod_id = p.id and stk.retail > 0)) as [" + col_retail + "]," + sqlLine;
+            db.query += "isnull(p.cost, 0) as [" + col_cost + "]," + sqlLine;
+            db.query += "isnull(p.whole, 0) as [" + col_whole + "]," + sqlLine;
+            db.query += "isnull(p.retail, 0) as [" + col_retail + "]," + sqlLine;
             if(term_id > 0)
                 db.query += "(select max(st.dr) from stock st where st.tran_id = 0 and st.prod_id = p.id and st.status = " + Constants.status_active + " and term_id = " + term_id + ") as [" + col_opening_stock + "]" + sqlLine;
             else
@@ -79,7 +79,7 @@ namespace prjGrow.Classes
                 db.query += "and p.category = " + category + "" + sqlLine;
             if (forLabels) db.query += "and (p.prod_code = '' or len(prod_code) = 6)" + sqlLine;
         //    db.query += "and s.id = (select max(stk.id) from Stock stk where stk.prod_id = p.id)" + sqlLine;
-            db.query += "group by p.id, p.prod_code, p.prod_name, p.prod_name, p.type, t.name, p.unit, p.status" + sqlLine;
+            db.query += "group by p.id, p.prod_code, p.prod_name, p.prod_name, p.type, t.name, p.unit, p.cost, p.whole, p.retail, p.status" + sqlLine;
             db.query += Custom.client_id_active == 5 ? "order by p.prod_code, p.prod_name" : "order by p.prod_name" + sqlLine;
 
             return db.getDataTable();
@@ -111,12 +111,12 @@ namespace prjGrow.Classes
         {
             db.query = "select p.id as [" + Product.col_prod_id + "], p.prod_code as [" + col_code + "], p.prod_name as [" + col_prod_name + "]," + sqlLine;
             if (Custom.mod_fnb)
-                db.query += "isnull((select max(st.cost) from Stock st where st.id = (select max(stk.id) from Stock stk where stk.prod_id = p.id and stk.cost > 0)), 0) as [" + col_cost + "]," + sqlLine;
+                db.query += "isnull(p.cost, 0) as [" + col_cost + "]," + sqlLine;
             else
-                db.query += "isnull((select max(st.cost) from Stock st where st.id = (select max(stk.id) from Stock stk where stk.prod_id = p.id and stk.retail > 0)), 0) as [" + col_cost + "]," + sqlLine;
-            db.query += "isnull((select max(st.whole) from Stock st where st.id = (select max(stk.id) from Stock stk where stk.prod_id = p.id and stk.retail > 0)), 0) as [" + col_whole + "]," + sqlLine;
-            db.query += "isnull((select max(st.retail) from Stock st where st.id = (select max(stk.id) from Stock stk where stk.prod_id = p.id and stk.retail > 0)), 0) as [" + col_retail + "]," + sqlLine;
-            db.query += "Round(isnull((select max(st.frieght) from Stock st where st.id = (select max(stk.id) from Stock stk where stk.prod_id = p.id and stk.frieght > 0)), 0), 2) as [" + col_frieght + "]" + sqlLine;
+                db.query += "isnull(p.cost, 0) as [" + col_cost + "]," + sqlLine;
+            db.query += "isnull(p.whole, 0) as [" + col_whole + "]," + sqlLine;
+            db.query += "isnull(p.retail, 0) as [" + col_retail + "]," + sqlLine;
+            db.query += "isnull(p.freight, 0) as [" + col_frieght + "]" + sqlLine;
             db.query += ", case when Round(isnull(sum(s.dr) - sum(s.cr), 0), 2) < 0 then 0 when Round(isnull(sum(s.dr) - sum(s.cr), 0), 2) >= 0 then Round(isnull(sum(s.dr) - sum(s.cr), 0), 2) end as [" + col_stock + "]" + sqlLine;
             db.query += ", p.category as [" + Product.col_cate + "]" + sqlLine;
             db.query += ", p.min_stock as [" + Product.col_min_stock + "]" + sqlLine;
@@ -142,7 +142,7 @@ namespace prjGrow.Classes
             }
             else
                 db.query += "and p.category = " + category + "" + sqlLine; 
-            db.query += "group by p.id, p.prod_code, p.prod_name, p.category, p.unit, p.min_stock" + sqlLine;
+            db.query += "group by p.id, p.prod_code, p.prod_name, p.category, p.unit, p.min_stock, p.cost, p.whole, p.retail, p.freight" + sqlLine;
             db.query += onlyAvailable ? "having isnull(sum(s.dr) - sum(s.cr), 0) > 0" : "" + sqlLine;
             db.query += onlyAvailable && cateServ ? " or p.category in (" + Constants.cate_service + ")" + sqlLine : "";
             db.query += onlyAvailable && cateBakery ? " or p.category in (" + Constants.cate_cake + ")" + sqlLine : "";
