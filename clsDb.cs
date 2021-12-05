@@ -26,7 +26,7 @@ namespace prjGrow
             con.Open();
         }
 
-        public SqlConnection getCon()
+        public SqlConnection getCon()		//returns connection object
         {
             return con;
         }
