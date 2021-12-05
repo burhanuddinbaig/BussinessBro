@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace prjGrow.Classes
 {
-    public class Bank : Coa
+    public class Bank : Coa		//class Bank
     {
         public long id { get; set; }
         public string name { get; set; }
