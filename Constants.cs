@@ -14,6 +14,7 @@ namespace prjGrow
 
         public Color color = Color.FromArgb(1,138, 43, 226);
 
+
         public static bool multiple_forms = true;
 
         public const short module_product = 1;
