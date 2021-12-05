@@ -91,7 +91,7 @@ namespace prjGrow
             }
             return true;
         }
-        public bool chkNum(NumericUpDown num)
+        public bool chkNum(NumericUpDown num)		//Checks a num up down is empty or not
         {
             if (num.Value == num.Minimum)
             {
