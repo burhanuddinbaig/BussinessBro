@@ -51,7 +51,7 @@ namespace prjGrow.Classes
 
         public bool updateBank()
         {
-            acc_id = getAccId("Bank", this.id);
+            acc_id = getAccId("Bank", this.id);		//to get accid
             
             db.Connect();
             SqlTransaction tran = db.con.BeginTransaction();
