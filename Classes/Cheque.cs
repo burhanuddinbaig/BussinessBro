@@ -53,7 +53,7 @@ namespace prjGrow.Classes
             progress = Constants.cheq_status_pending;
             tblToProcess = getPayCheques();
 
-            if (tblToProcess.Rows.Count <= 0)
+            if (tblToProcess.Rows.Count <= 0)		//If the row count is less than or equal to zero
                 return;
             
             db.query = "Update Cheque set progress = " + Constants.cheq_status_processed + sqlLine;
