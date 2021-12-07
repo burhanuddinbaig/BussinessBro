@@ -23,7 +23,7 @@ namespace prjGrow.Classes
             acc_id = getNextAccId();
 
             db.Connect();
-            SqlTransaction tran = db.con.BeginTransaction();
+            SqlTransaction tran = db.con.BeginTransaction();		//begins the transaction
             try
             {
                 db.query = "insert into bank(name, acc_no, acc_id, uid)" + sqlLine;

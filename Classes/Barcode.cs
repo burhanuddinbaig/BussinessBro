@@ -44,6 +44,7 @@ namespace prjGrow.Classes
             tblCodes.Columns.AddRange(cols);
         }
 
+
         public void getLastCode()
         {
             db.query = "select max(prod_code) as [" + Product.col_code + "]" + sqlLine;
