@@ -70,7 +70,7 @@ namespace prjGrow.Classes
             }
             catch (Exception ex)
             {
-                tran.Rollback();
+                tran.Rollback();		//transaction will be undo in case of any exception
             }
             finally
             {
