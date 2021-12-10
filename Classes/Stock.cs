@@ -30,7 +30,7 @@ namespace prjGrow.Classes
         public bool expiryitem = false;
 
     //    clsDb db = new clsDb();
-        public const string col_id = "Id", col_sale_id = "Sale_Id", col_prod_id = "prod_id", col_qty = "Qty", col_expiry = "Expiry";    //Constants
+        public const string col_id = "Id", col_sale_id = "Sale_Id", col_prod_id = "prod_id", col_qty = "Qty", col_expiry = "Expiry";    //Constants for Stock
         public const string col_cost = "Cost", col_retail = "Retail", col_whole = "Whole", col_sold = "Price", col_amount = "Amount";
 
         public bool saveSaleStock(DataTable cart, long tran_id, SqlTransaction tran)
