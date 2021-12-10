@@ -76,7 +76,7 @@ namespace prjGrow.Classes
 
         public DataTable getSaleStock(long tranId)
         {
-            db.query = "select s.id as [" + col_id + "], s.tran_id as [" + col_tran_id + "], s.prod_id as [" + col_prod_id + "], p.prod_name as [" + Product.col_prod_name + "], cost as [" + col_cost + "], cr as [" + col_qty + "], sold as [" + col_sold + "], cr * sold as [" + col_amount + "], p.category as [" + Product.col_cate + "], s.dist as "+col_item_dist+"" + sqlLine;
+            db.query = "select s.id as [" + col_id + "], s.tran_id as [" + col_tran_id + "], s.prod_id as [" + col_prod_id + "], p.prod_name as [" + Product.col_prod_name + "], s.cost as [" + col_cost + "], cr as [" + col_qty + "], sold as [" + col_sold + "], cr * sold as [" + col_amount + "], p.category as [" + Product.col_cate + "], s.dist as "+col_item_dist+"" + sqlLine;
             db.query += "from Stock s inner join product p on s.prod_id = p.id" + sqlLine;
             db.query += "where s.status = " + Constants.status_active + " and (p.status = " + Constants.status_active + " or p.status = "+Constants.status_disabled+")" + sqlLine;
             db.query += "and s.cr > 0 and tran_id = " + tranId + " and s.sold > 0" + sqlLine;
@@ -132,7 +132,7 @@ namespace prjGrow.Classes
         public DataTable getPurchaseStock(long tranId)
         {
             db.query = "select s.id as [" + col_id + "], s.tran_id as [" + col_tran_id + "], s.prod_id as [" + col_prod_id + "], p.prod_name as [" + Product.col_prod_name + "]" + sqlLine;
-            db.query += ", cost as [" + col_cost + "], retail as [" + col_retail + "], whole as [" + col_whole + "], dr as [" + col_qty + "], dr * cost as [" + col_amount + "]" + sqlLine;
+            db.query += ", s.cost as [" + col_cost + "], s.retail as [" + col_retail + "], s.whole as [" + col_whole + "], dr as [" + col_qty + "], dr * s.cost as [" + col_amount + "]" + sqlLine;
             db.query += ", expiry as [" + col_expiry + "], p.category as [" + Product.col_cate + "], s.[frieght] as [" + col_frieght + "]" + sqlLine;
             db.query += "from Stock s inner join product p on s.prod_id = p.id" + sqlLine;
             db.query += "where s.status = " + Constants.status_active + " and (p.status = " + Constants.status_active + " or p.[status] = " + Constants.status_disabled + ")" + sqlLine;
