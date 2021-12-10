@@ -91,7 +91,7 @@ namespace prjGrow.Classes
             db.query += "where tran_id = " + tranId;
 
             return db.runQuery(tran);
-        }
+        }           // to delete entries from stock
 
         public bool savePurchaseStock(SqlTransaction tran, DataTable cart)
         {
