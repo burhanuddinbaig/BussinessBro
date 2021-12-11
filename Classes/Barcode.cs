@@ -13,7 +13,7 @@ using System.Data.Common;
 
 namespace prjGrow.Classes
 {
-    public class Barcode: Gen
+    public class Barcode: Gen		//class barcode
     {
         public long prod_id { get; set; }
         public string prod_code { get; set; }
