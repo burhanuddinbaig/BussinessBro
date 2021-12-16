@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 
 namespace prjGrow.Classes
 {
-    public class Customer: Coa
+    public class Customer: Coa			//Customer
     {
         public long id { get; set; }
         public string name { get; set; }
