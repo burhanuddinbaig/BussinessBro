@@ -295,12 +295,12 @@ namespace prjGrow.Classes
             db.query += toDeliver ? "and i.progress in (" + order_ready + ")" + sqlLine : "and i.progress not in ("+order_deliver+"," + order_ready + ")" + sqlLine;
             db.query += toDeliver ? "and o.cus_id = " + cus_id + sqlLine : "";
             return db.getDataTable();
-        } 
+        }
         public DataTable getOrderProgress()
         {
-            db.query = "select o.id as [" + col_order_no + "], o.date as [" + col_date + "], i.prod_id as [" + col_prod_id + "], p.prod_name  as [" + col_prod_name + "]," + sqlLine;
+            db.query = "select o.id as [" + col_order_no + "], o.date as [" + col_date + "], i.prod_id as [" + col_prod_id + "], cs.name as [" + col_cus_name + "],  p.prod_name  as [" + col_prod_name + "]," + sqlLine;
             db.query += "i.qty as [" + col_qty + "], i.price as [" + col_price + "], i.descrip as [" + col_descrip + "], i.progress as [" + col_prog_id + "]," + sqlLine;
-            db.query += "cs.name as [" + col_cus_name + "], pg.name as [" + col_progress + "]" + sqlLine;
+            db.query += "pg.name as [" + col_progress + "]" + sqlLine;
             db.query += "from Order_item i inner join Product p on i.prod_id = p.id" + sqlLine;
             db.query += "inner join Orders o on i.order_id = o.id" + sqlLine;
             db.query += "inner join Progress pg on i.progress = pg.id" + sqlLine;
