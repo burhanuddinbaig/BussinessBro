@@ -7,7 +7,7 @@ using System.Data;
 
 namespace prjGrow.Classes
 {
-    public class Custom : Pos
+    public class Custom : Pos		//Custom
     {
         clsDb db = new clsDb();
         DataTable tblMod = null;
