@@ -8,11 +8,9 @@ using System.Drawing;
 using System.Timers;
 using prjGrow.Classes;
 
-
-
 namespace prjGrow
 {
-    public class Common: Pos
+    public class Common: Pos		//Common
     {
         clsDb db = new clsDb();
         public DateTime sdate = new DateTime(), edate = new DateTime();
