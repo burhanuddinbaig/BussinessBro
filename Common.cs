@@ -10,7 +10,7 @@ using prjGrow.Classes;
 
 namespace prjGrow
 {
-    public class Common: Pos		//Common
+    public class Common: Pos		//Common Class with common functions
     {
         clsDb db = new clsDb();
         public DateTime sdate = new DateTime(), edate = new DateTime();
