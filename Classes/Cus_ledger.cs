@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 
 namespace prjGrow.Classes
 {
-    public class Cus_ledger : Journal		//Customer
+    public class Cus_ledger : Journal		//Customer Ledger
     {
         public long id { get; set; }
         public long cus_id { get; set; }
