@@ -180,6 +180,7 @@ E:\Current Projects\prjGrow\prjGrow\bin\Debug\prjGrow.exe.config
 E:\Current Projects\prjGrow\prjGrow\bin\Debug\prjGrow.exe
 E:\Current Projects\prjGrow\prjGrow\bin\Debug\prjGrow.pdb
 E:\Current Projects\prjGrow\prjGrow\bin\Debug\OnBarcode.Barcode.WinForms.dll
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.csprojResolveAssemblyReference.cache
 E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Accounts.frmAddCheque.resources
 E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Accounts.frmBankTran.resources
 E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Accounts.frmBaseAccounts.resources
@@ -195,6 +196,7 @@ E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Fnb.frmTable.resources
 E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.frmDashboard.resources
 E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.General.frmAddClient.resources
 E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.General.frmAssets.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.General.frmAutoDis.resources
 E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.General.frmBank.resources
 E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.General.frmBaseGeneral.resources
 E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.General.frmBaseMicro.resources
@@ -234,6 +236,7 @@ E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmInboundRe
 E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmOrderRepAct.resources
 E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmPriceList.resources
 E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmProductionReport.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmSupOrder.resources
 E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmSaleReceipt.resources
 E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmSaleSummary.resources
 E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmShortStockRep.resources
@@ -249,6 +252,7 @@ E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmPurRep.re
 E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmSaleRep.resources
 E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmStockRep.resources
 E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmSupLed.resources
+E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.StockInfo.frmSupplierOrders.resources
 E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.StockInfo.frmTmp.resources
 E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.StockInfo.frmAssetPurchase.resources
 E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.StockInfo.frmBarcodeGen.resources
@@ -271,7 +275,3 @@ E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Users.frmUserInfo.reso
 E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.csproj.GenerateResource.Cache
 E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.exe
 E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.pdb
-E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.StockInfo.frmSupplierOrders.resources
-E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.Reporting.frmSupOrder.resources
-E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.csprojResolveAssemblyReference.cache
-E:\Current Projects\prjGrow\prjGrow\obj\x86\Debug\prjGrow.General.frmAutoDis.resources

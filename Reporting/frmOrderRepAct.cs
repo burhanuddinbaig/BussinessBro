@@ -53,7 +53,7 @@ namespace prjGrow.Reporting
 
         private void frmOrderRepAct_Load(object sender, EventArgs e)
         {
-            com.loadFormInfo("Active Orders Report", lblTitle);
+            com.loadFormInfo("Active Orders", lblTitle);
             customize();
         }
     }

@@ -31,7 +31,7 @@ namespace prjGrow.Classes
         #region column_names
 
         public const string col_tran_id = "tran_id", col_dr = "Debit", col_cr = "Credit", col_acc_id = "Acc_id";
-        public const string col_id = "Id", col_sno = "sno", col_issue_date = "Issue Date", col_reference = "Reference", col_cheq_no = "Cheque_No", col_sale_id = "Sale_Id", col_prod_id = "prod_id", col_qty = "Qty", col_cost = "Cost";
+        public const string col_id = "Id", col_sno = "sno", col_issue_date = "Issue Date", col_reference = "Reference", col_cheq_no = "Cheque_No", col_sale_id = "Sale_Id", col_prod_id = "prod_id", col_qty = "Qty", col_qty_init = "qty_init", col_cost = "Cost";
         public const string col_retail = "Retail", col_whole = "Whole", col_sold = "Price", col_amount = "Amount", col_remarks = "Remarks", col_descrip = "Description";
         public const string col_prod_code = "Code", col_prod_name = "Product", col_date = "Date", col_stock = "Stock", col_price = "Price";
         public const string col_bnk_id = "bank_id", col_bank = "Bank", col_deposit = "Deposit", col_withdraw = "Withdraw", col_native = "Native";

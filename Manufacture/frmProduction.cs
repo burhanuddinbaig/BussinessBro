@@ -155,13 +155,9 @@ namespace prjGrow.Manufacture
         {
             frmProducts prod = new frmProducts();
             prod.close_on_save = true;
+            prod.defaultSelected = Constants.cate_gadget;
             prod.ShowDialog();
             loadProducts();
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -289,14 +289,14 @@
             this.txtCheq_no.Location = new System.Drawing.Point(608, 222);
             this.txtCheq_no.Name = "txtCheq_no";
             this.txtCheq_no.Size = new System.Drawing.Size(199, 26);
-            this.txtCheq_no.TabIndex = 5;
+            this.txtCheq_no.TabIndex = 7;
             // 
             // txtReference
             // 
             this.txtReference.Location = new System.Drawing.Point(608, 255);
             this.txtReference.Name = "txtReference";
             this.txtReference.Size = new System.Drawing.Size(199, 26);
-            this.txtReference.TabIndex = 51;
+            this.txtReference.TabIndex = 8;
             // 
             // label9
             // 
@@ -319,7 +319,7 @@
             0});
             this.numDist.Name = "numDist";
             this.numDist.Size = new System.Drawing.Size(100, 26);
-            this.numDist.TabIndex = 53;
+            this.numDist.TabIndex = 5;
             this.numDist.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numDist.ThousandsSeparator = true;
             this.numDist.ValueChanged += new System.EventHandler(this.numDist_ValueChanged);

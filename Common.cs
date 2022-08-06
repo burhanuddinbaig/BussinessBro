@@ -68,7 +68,7 @@ namespace prjGrow
             }
             return true;
         }
-        public bool chkCombo(ComboBox cmb)
+        public bool chkCombo(ComboBox cmb)      //returns true if is not empty
         {
             int i = cmb.SelectedIndex;
             if (i < 0)

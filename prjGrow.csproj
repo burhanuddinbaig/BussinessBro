@@ -145,6 +145,12 @@
       <DependentUpon>repCusLedAll.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="bin\Debug\reports\repPurDetail.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>repPurDetail.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="bin\Debug\reports\repSaleReciptD.cs">
       <DependentUpon>repSaleReciptD.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -979,6 +985,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>repCusLedAll.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="bin\Debug\reports\repPurDetail.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>repPurDetail.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="bin\Debug\reports\repSaleReciptD.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>repSaleReciptD.cs</LastGenOutput>
@@ -1393,6 +1403,7 @@
       <DependentUpon>frmUserInfo.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="General\ClientDS.xsc">
       <DependentUpon>ClientDS.xsd</DependentUpon>
     </None>

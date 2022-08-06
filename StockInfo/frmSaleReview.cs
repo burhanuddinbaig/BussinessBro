@@ -85,7 +85,7 @@ namespace prjGrow.StockInfo
             else
                 numQty.Value = 0;
         }
-
+        
         void showImeiReturn(int rowIndex)
         {
             obji.toReturn = true;
@@ -117,8 +117,8 @@ namespace prjGrow.StockInfo
         void showBills()
         {
             dgvData.DataSource = tblBills;
-            com.hideColumns(dgvData, new string[] { Sale.col_cus_id, Sale.col_bank_id, Sale.col_tran_id, Classes.Stock.col_cost, Sale.col_credit, "Return" });
-            com.showColumns(dgvData, new string[] { "Review" });
+            com.hideColumns(dgvData, new string[] { Sale.col_cus_id, Sale.col_bank_id, Sale.col_tran_id, Classes.Stock.col_cost, Sale.col_credit, Constants.btn_return , Constants.btn_add, Constants.btn_sub });
+            com.showColumns(dgvData, new string[] { Constants.btn_review });
             dgvData.ReadOnly = true;
         }
 
@@ -233,8 +233,8 @@ namespace prjGrow.StockInfo
         {
             tblCart = stock.getSaleStock(Convert.ToInt64(row.Cells[Sale.col_tran_id].Value));
             dgvData.DataSource = tblCart;
-            com.hideColumns(dgvData, new string[] { Classes.Stock.col_id, Classes.Stock.col_prod_id, Classes.Stock.col_tran_id, Classes.Stock.col_cost, Product.col_cate, "Review" });
-            com.showColumns(dgvData, new string[] { "Return" });
+            com.hideColumns(dgvData, new string[] { Classes.Stock.col_id, Classes.Stock.col_prod_id, Classes.Stock.col_tran_id, Classes.Stock.col_cost, Stock.col_stock, Product.col_cate, Stock.col_qty_init, "Review" });
+            com.showColumns(dgvData, new string[] { "Return", Constants.btn_add, Constants.btn_sub });
             if (Custom.client_id_active == 5)
                 com.hideColumns(dgvData, new string[] { Classes.Stock.col_unit });
             if (!Custom.fet_item_dist)
@@ -290,6 +290,7 @@ namespace prjGrow.StockInfo
             else
                 numCredit.Value = numBillTotal.Value - numDiscount.Value - numPaid.Value;
 
+            sale.total = Convert.ToInt32(numBillTotal.Value);
             sale.discount = Convert.ToInt32(numDiscount.Value);
             sale.paid = Convert.ToInt64(numPaid.Value);
         }
@@ -397,7 +398,6 @@ namespace prjGrow.StockInfo
 
         private void numQty_ValueChanged(object sender, EventArgs e)
         {
-
             if (numQty.Value > numStock.Value && !is_service)
             {
                 com.showMessage("Sorry, you have only " + numStock.Value + " items in Stock ", lblMsg, Constants.message_info, tmrMsg);
@@ -406,7 +406,7 @@ namespace prjGrow.StockInfo
             }
             calAmount();
         }
-
+        
         private void numPrice_ValueChanged(object sender, EventArgs e)
         {
             calAmount();
@@ -418,8 +418,8 @@ namespace prjGrow.StockInfo
             com.loadFormInfo(this, "Sale Review", lblClient, lblTitle);
             //customize();
             //resize();
-            //loadProducts();
-            //loadProdSrh();
+            loadProducts();
+            loadProdSrh();
             loadCustomer();
             loadMonth();
             loadBillsByDate();
@@ -480,7 +480,9 @@ namespace prjGrow.StockInfo
         {
             if (e.ColumnIndex < 0 || e.RowIndex < 0)
                 return;
-            if (dgvData.DataSource == tblBills && dgvData.Columns[e.ColumnIndex].Name == "Review")
+            bool isCart = dgvData.DataSource == tblCart;
+
+            if ((!isCart) && dgvData.Columns[e.ColumnIndex].Name == Constants.btn_review)
             {
                 loading = true;
                 loadBillInfo(dgvData.Rows[e.RowIndex]);
@@ -489,7 +491,7 @@ namespace prjGrow.StockInfo
                 calValues();
                 getInitAmt();
             }
-            if (dgvData.DataSource == tblCart && dgvData.Columns[e.ColumnIndex].Name == "Return")
+            if ( isCart && dgvData.Columns[e.ColumnIndex].Name == Constants.btn_return)
             {
                 if (!com.sureOption("Do you want to Return such item"))
                     return;
@@ -502,11 +504,31 @@ namespace prjGrow.StockInfo
                     tblCart.Rows.RemoveAt(e.RowIndex);
                 }
                 dgvData.DataSource = tblCart;
-
                 //com.delRows(obji.objImei.tblTempTable, Product.col_prod_id, obji.prod_id);
                 
                 sale.tblIMEI = obji.objImei.tblTempTable;
                 loading = false;
+                calValues();
+                calRefund();
+            }
+            if ( isCart && dgvData.Columns[e.ColumnIndex].Name == Constants.btn_add)
+            {
+                double stk = Convert.ToDouble(dgvData.Rows[e.RowIndex].Cells[Sale.col_stock].Value);
+                int qty = Convert.ToInt32(dgvData.Rows[e.RowIndex].Cells[Sale.col_qty].Value);
+                int qty_init = Convert.ToInt32(dgvData.Rows[e.RowIndex].Cells[Sale.col_qty_init].Value);
+                if (qty >= stk + qty_init)                                                           //to check the quantity should not over goes from stock                                  
+                    com.showMessage("Sorry, you have only " + stk + " items in Stock ", lblMsg, Constants.message_info, tmrMsg);
+                else
+                    dgvData.Rows[e.RowIndex].Cells[Sale.col_qty].Value = qty + 1;
+                
+                calValues();
+                calRefund();
+            }
+            if ( isCart && dgvData.Columns[e.ColumnIndex].Name == Constants.btn_sub)
+            {
+                int i = Convert.ToInt32(dgvData.Rows[e.RowIndex].Cells[Sale.col_qty].Value);
+                i = i > 0 ? i - 1 : i;                                                      //to check the quantity should not be less then zero
+                dgvData.Rows[e.RowIndex].Cells[Sale.col_qty].Value = i;
                 calValues();
                 calRefund();
             }

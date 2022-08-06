@@ -27,7 +27,7 @@ namespace prjGrow.Classes
         public clsDb db = new clsDb();
 
         public ReportDocument getReport(string repName)
-    {
+        {
             cryRpt.Load(Application.StartupPath + "\\reports\\" + repName);
             crConnectionInfo.ServerName = Custom.ip_adrs;
             crConnectionInfo.DatabaseName = /*"dbHfp";//*/"dbGrow";

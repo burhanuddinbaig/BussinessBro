@@ -265,7 +265,7 @@ namespace prjGrow
             }
             return result;
         }
-
+        
         public double readDouble(string _query)
         {
             double result = 0;

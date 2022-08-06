@@ -9,13 +9,9 @@ namespace prjGrow
     public class Constants : Pos
     {
 //        public const string client_name = "Malik Steel Works";
-        
         public const string bottom_label_general = "Shortcut Keys=> Save: Alt + S, Update: Alt + U, Clear: Alt + R, Close: Alt + C";
-
         public Color color = Color.FromArgb(1,138, 43, 226);
-
         public static bool multiple_forms = true;	//true to enable multiple forms
-
         public const short module_product = 1;
 //        public const short module_bank = 2;
 //        public const short module_suplier = 3;
@@ -73,6 +69,18 @@ namespace prjGrow
         public const short config_salery = 23;
         //-----------------------------------------------
 
+        //--------- BBro clients ----------------
+        public const short CLT_MALIK_STEEL = 1;
+        public const short CLT_ALKARIM = 2;
+        public const short CLT_DUBAI_COMMNICATION = 3;
+        public const short CLT_SAUGHAT_RESTURANT = 4;
+        public const short CLT_BRUSHAL_PRINTERS = 5;
+        public const short CLT_SAFE_RIDERS = 6;
+        public const short CLT_HUNZA_FOOD_PROCESSING = 7;
+        public const short CLT_CYBER_BRO = 8;
+        public const short CLT_HUNZA_GARDEN = 9;
+        //----------------------------------------
+
         public const string operation_save = "&Save";
         public const string operation_update = "&Update";
         public const string operation_edit = "Edit";
@@ -101,10 +109,9 @@ namespace prjGrow
         public const short auth_admin = 2;
         public const short auth_guest = 3;
 
+        public const string btn_review = "Review", btn_return = "Return", btn_add = "Add", btn_sub = "Sub", btn_del = "Delete", btn_edit = "Edit";
         public const string btn_cnc = "Ca&ncel", btn_save = "&Save";
-
         public const short order_new = 1, order_factory = 2, order_ready = 3, order_display = 4, order_recieved = 8, order_delivered = 9;
-
         public const string code_bag_sm = "100001", code_bag_lg = "100002";
     }
 }

@@ -150,7 +150,6 @@
             this.rbPending.TabStop = true;
             this.rbPending.Text = "Pending";
             this.rbPending.UseVisualStyleBackColor = true;
-            this.rbPending.CheckedChanged += new System.EventHandler(this.rbPending_CheckedChanged);
             // 
             // panel1
             // 

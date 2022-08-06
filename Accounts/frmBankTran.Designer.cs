@@ -54,10 +54,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numBalance)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblTitle
-            // 
-            this.lblTitle.Text = "E Light Software Solutions, Pakistan LTD";
-            // 
             // lblMsg
             // 
             this.lblMsg.Location = new System.Drawing.Point(228, 93);

@@ -29,69 +29,69 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TreeNode treeNode35 = new System.Windows.Forms.TreeNode("Products");
-            System.Windows.Forms.TreeNode treeNode36 = new System.Windows.Forms.TreeNode("Bank");
-            System.Windows.Forms.TreeNode treeNode37 = new System.Windows.Forms.TreeNode("Supplier");
-            System.Windows.Forms.TreeNode treeNode38 = new System.Windows.Forms.TreeNode("Customer");
-            System.Windows.Forms.TreeNode treeNode39 = new System.Windows.Forms.TreeNode("Expense Type");
-            System.Windows.Forms.TreeNode treeNode40 = new System.Windows.Forms.TreeNode("General", new System.Windows.Forms.TreeNode[] {
-            treeNode35,
-            treeNode36,
-            treeNode37,
-            treeNode38,
-            treeNode39});
-            System.Windows.Forms.TreeNode treeNode41 = new System.Windows.Forms.TreeNode("Purchase");
-            System.Windows.Forms.TreeNode treeNode42 = new System.Windows.Forms.TreeNode("Purchase Review");
-            System.Windows.Forms.TreeNode treeNode43 = new System.Windows.Forms.TreeNode("Purchase Report");
-            System.Windows.Forms.TreeNode treeNode44 = new System.Windows.Forms.TreeNode("Sale");
-            System.Windows.Forms.TreeNode treeNode45 = new System.Windows.Forms.TreeNode("Sale Review");
-            System.Windows.Forms.TreeNode treeNode46 = new System.Windows.Forms.TreeNode("Sale Report");
-            System.Windows.Forms.TreeNode treeNode47 = new System.Windows.Forms.TreeNode("Stock Damage");
-            System.Windows.Forms.TreeNode treeNode48 = new System.Windows.Forms.TreeNode("Stock Report");
-            System.Windows.Forms.TreeNode treeNode49 = new System.Windows.Forms.TreeNode("Expiry Report");
-            System.Windows.Forms.TreeNode treeNode50 = new System.Windows.Forms.TreeNode("Stock", new System.Windows.Forms.TreeNode[] {
-            treeNode41,
-            treeNode42,
-            treeNode43,
-            treeNode44,
-            treeNode45,
-            treeNode46,
-            treeNode47,
-            treeNode48,
-            treeNode49});
-            System.Windows.Forms.TreeNode treeNode51 = new System.Windows.Forms.TreeNode("Customer Transactions");
-            System.Windows.Forms.TreeNode treeNode52 = new System.Windows.Forms.TreeNode("Supplier Transactions");
-            System.Windows.Forms.TreeNode treeNode53 = new System.Windows.Forms.TreeNode("Expense");
-            System.Windows.Forms.TreeNode treeNode54 = new System.Windows.Forms.TreeNode("Bank Transactions");
-            System.Windows.Forms.TreeNode treeNode55 = new System.Windows.Forms.TreeNode("Employee Payments");
-            System.Windows.Forms.TreeNode treeNode56 = new System.Windows.Forms.TreeNode("Transactions", new System.Windows.Forms.TreeNode[] {
-            treeNode51,
-            treeNode52,
-            treeNode53,
-            treeNode54,
-            treeNode55});
-            System.Windows.Forms.TreeNode treeNode57 = new System.Windows.Forms.TreeNode("General Journal");
-            System.Windows.Forms.TreeNode treeNode58 = new System.Windows.Forms.TreeNode("Cash Book");
-            System.Windows.Forms.TreeNode treeNode59 = new System.Windows.Forms.TreeNode("Customer Ledger");
-            System.Windows.Forms.TreeNode treeNode60 = new System.Windows.Forms.TreeNode("Supplier Ledger");
-            System.Windows.Forms.TreeNode treeNode61 = new System.Windows.Forms.TreeNode("Bank History");
-            System.Windows.Forms.TreeNode treeNode62 = new System.Windows.Forms.TreeNode("Profit & Loss");
-            System.Windows.Forms.TreeNode treeNode63 = new System.Windows.Forms.TreeNode("Day Book");
-            System.Windows.Forms.TreeNode treeNode64 = new System.Windows.Forms.TreeNode("Balance Sheet");
-            System.Windows.Forms.TreeNode treeNode65 = new System.Windows.Forms.TreeNode("Accounts", new System.Windows.Forms.TreeNode[] {
-            treeNode57,
-            treeNode58,
-            treeNode59,
-            treeNode60,
-            treeNode61,
-            treeNode62,
-            treeNode63,
-            treeNode64});
-            System.Windows.Forms.TreeNode treeNode66 = new System.Windows.Forms.TreeNode("Change Password");
-            System.Windows.Forms.TreeNode treeNode67 = new System.Windows.Forms.TreeNode("Add New User");
-            System.Windows.Forms.TreeNode treeNode68 = new System.Windows.Forms.TreeNode("Users", new System.Windows.Forms.TreeNode[] {
-            treeNode66,
-            treeNode67});
+            System.Windows.Forms.TreeNode treeNode69 = new System.Windows.Forms.TreeNode("Products");
+            System.Windows.Forms.TreeNode treeNode70 = new System.Windows.Forms.TreeNode("Bank");
+            System.Windows.Forms.TreeNode treeNode71 = new System.Windows.Forms.TreeNode("Supplier");
+            System.Windows.Forms.TreeNode treeNode72 = new System.Windows.Forms.TreeNode("Customer");
+            System.Windows.Forms.TreeNode treeNode73 = new System.Windows.Forms.TreeNode("Expense Type");
+            System.Windows.Forms.TreeNode treeNode74 = new System.Windows.Forms.TreeNode("General", new System.Windows.Forms.TreeNode[] {
+            treeNode69,
+            treeNode70,
+            treeNode71,
+            treeNode72,
+            treeNode73});
+            System.Windows.Forms.TreeNode treeNode75 = new System.Windows.Forms.TreeNode("Purchase");
+            System.Windows.Forms.TreeNode treeNode76 = new System.Windows.Forms.TreeNode("Purchase Review");
+            System.Windows.Forms.TreeNode treeNode77 = new System.Windows.Forms.TreeNode("Purchase Report");
+            System.Windows.Forms.TreeNode treeNode78 = new System.Windows.Forms.TreeNode("Sale");
+            System.Windows.Forms.TreeNode treeNode79 = new System.Windows.Forms.TreeNode("Sale Review");
+            System.Windows.Forms.TreeNode treeNode80 = new System.Windows.Forms.TreeNode("Sale Report");
+            System.Windows.Forms.TreeNode treeNode81 = new System.Windows.Forms.TreeNode("Stock Damage");
+            System.Windows.Forms.TreeNode treeNode82 = new System.Windows.Forms.TreeNode("Stock Report");
+            System.Windows.Forms.TreeNode treeNode83 = new System.Windows.Forms.TreeNode("Expiry Report");
+            System.Windows.Forms.TreeNode treeNode84 = new System.Windows.Forms.TreeNode("Stock", new System.Windows.Forms.TreeNode[] {
+            treeNode75,
+            treeNode76,
+            treeNode77,
+            treeNode78,
+            treeNode79,
+            treeNode80,
+            treeNode81,
+            treeNode82,
+            treeNode83});
+            System.Windows.Forms.TreeNode treeNode85 = new System.Windows.Forms.TreeNode("Customer Transactions");
+            System.Windows.Forms.TreeNode treeNode86 = new System.Windows.Forms.TreeNode("Supplier Transactions");
+            System.Windows.Forms.TreeNode treeNode87 = new System.Windows.Forms.TreeNode("Expense");
+            System.Windows.Forms.TreeNode treeNode88 = new System.Windows.Forms.TreeNode("Bank Transactions");
+            System.Windows.Forms.TreeNode treeNode89 = new System.Windows.Forms.TreeNode("Employee Payments");
+            System.Windows.Forms.TreeNode treeNode90 = new System.Windows.Forms.TreeNode("Transactions", new System.Windows.Forms.TreeNode[] {
+            treeNode85,
+            treeNode86,
+            treeNode87,
+            treeNode88,
+            treeNode89});
+            System.Windows.Forms.TreeNode treeNode91 = new System.Windows.Forms.TreeNode("General Journal");
+            System.Windows.Forms.TreeNode treeNode92 = new System.Windows.Forms.TreeNode("Cash Book");
+            System.Windows.Forms.TreeNode treeNode93 = new System.Windows.Forms.TreeNode("Customer Ledger");
+            System.Windows.Forms.TreeNode treeNode94 = new System.Windows.Forms.TreeNode("Supplier Ledger");
+            System.Windows.Forms.TreeNode treeNode95 = new System.Windows.Forms.TreeNode("Bank History");
+            System.Windows.Forms.TreeNode treeNode96 = new System.Windows.Forms.TreeNode("Profit & Loss");
+            System.Windows.Forms.TreeNode treeNode97 = new System.Windows.Forms.TreeNode("Day Book");
+            System.Windows.Forms.TreeNode treeNode98 = new System.Windows.Forms.TreeNode("Balance Sheet");
+            System.Windows.Forms.TreeNode treeNode99 = new System.Windows.Forms.TreeNode("Accounts", new System.Windows.Forms.TreeNode[] {
+            treeNode91,
+            treeNode92,
+            treeNode93,
+            treeNode94,
+            treeNode95,
+            treeNode96,
+            treeNode97,
+            treeNode98});
+            System.Windows.Forms.TreeNode treeNode100 = new System.Windows.Forms.TreeNode("Change Password");
+            System.Windows.Forms.TreeNode treeNode101 = new System.Windows.Forms.TreeNode("Add New User");
+            System.Windows.Forms.TreeNode treeNode102 = new System.Windows.Forms.TreeNode("Users", new System.Windows.Forms.TreeNode[] {
+            treeNode100,
+            treeNode101});
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDashboard));
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.fileMenu = new System.Windows.Forms.ToolStripMenuItem();
@@ -147,6 +147,7 @@
             this.mtmStkDis = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator14 = new System.Windows.Forms.ToolStripSeparator();
             this.mtmAutoConsumeS = new System.Windows.Forms.ToolStripMenuItem();
+            this.mtmAutoDiscount = new System.Windows.Forms.ToolStripMenuItem();
             this.mtmShortStockRep = new System.Windows.Forms.ToolStripMenuItem();
             this.mtmSupOrder = new System.Windows.Forms.ToolStripMenuItem();
             this.mtmSupOrdRep = new System.Windows.Forms.ToolStripMenuItem();
@@ -269,7 +270,6 @@
             this.pnlPending = new System.Windows.Forms.Panel();
             this.lblPendingOrders = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.mtmAutoDiscount = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -738,6 +738,13 @@
             this.mtmAutoConsumeS.Text = "Auto Consume";
             this.mtmAutoConsumeS.Click += new System.EventHandler(this.mtmAutoConsumeS_Click);
             // 
+            // mtmAutoDiscount
+            // 
+            this.mtmAutoDiscount.Name = "mtmAutoDiscount";
+            this.mtmAutoDiscount.Size = new System.Drawing.Size(241, 26);
+            this.mtmAutoDiscount.Text = "Auto Discount";
+            this.mtmAutoDiscount.Visible = false;
+            // 
             // mtmShortStockRep
             // 
             this.mtmShortStockRep.Name = "mtmShortStockRep";
@@ -1163,148 +1170,148 @@
             this.treeMain.ItemHeight = 30;
             this.treeMain.Location = new System.Drawing.Point(2, 61);
             this.treeMain.Name = "treeMain";
-            treeNode35.BackColor = System.Drawing.Color.LightSeaGreen;
-            treeNode35.ForeColor = System.Drawing.Color.White;
-            treeNode35.Name = "nodProd";
-            treeNode35.Text = "Products";
-            treeNode36.BackColor = System.Drawing.Color.LightSeaGreen;
-            treeNode36.ForeColor = System.Drawing.Color.White;
-            treeNode36.Name = "nodBank";
-            treeNode36.Text = "Bank";
-            treeNode37.BackColor = System.Drawing.Color.LightSeaGreen;
-            treeNode37.ForeColor = System.Drawing.Color.White;
-            treeNode37.Name = "nodSupplier";
-            treeNode37.Text = "Supplier";
-            treeNode38.BackColor = System.Drawing.Color.LightSeaGreen;
-            treeNode38.ForeColor = System.Drawing.Color.White;
-            treeNode38.Name = "nodCustomer";
-            treeNode38.Text = "Customer";
-            treeNode39.BackColor = System.Drawing.Color.LightSeaGreen;
-            treeNode39.ForeColor = System.Drawing.Color.White;
-            treeNode39.Name = "nodExpType";
-            treeNode39.Text = "Expense Type";
-            treeNode40.BackColor = System.Drawing.Color.DarkCyan;
-            treeNode40.ForeColor = System.Drawing.Color.White;
-            treeNode40.Name = "nodGeneral";
-            treeNode40.Text = "General";
-            treeNode41.BackColor = System.Drawing.Color.LightSeaGreen;
-            treeNode41.ForeColor = System.Drawing.Color.White;
-            treeNode41.Name = "nodPurchase";
-            treeNode41.Text = "Purchase";
-            treeNode42.BackColor = System.Drawing.Color.LightSeaGreen;
-            treeNode42.ForeColor = System.Drawing.Color.White;
-            treeNode42.Name = "nodPurchaseReview";
-            treeNode42.Text = "Purchase Review";
-            treeNode43.BackColor = System.Drawing.Color.LightSeaGreen;
-            treeNode43.ForeColor = System.Drawing.Color.White;
-            treeNode43.Name = "nodPurRep";
-            treeNode43.Text = "Purchase Report";
-            treeNode44.BackColor = System.Drawing.Color.LightSeaGreen;
-            treeNode44.ForeColor = System.Drawing.Color.White;
-            treeNode44.Name = "nodSale";
-            treeNode44.Text = "Sale";
-            treeNode45.BackColor = System.Drawing.Color.LightSeaGreen;
-            treeNode45.ForeColor = System.Drawing.Color.White;
-            treeNode45.Name = "nodSaleReview";
-            treeNode45.Text = "Sale Review";
-            treeNode46.BackColor = System.Drawing.Color.LightSeaGreen;
-            treeNode46.ForeColor = System.Drawing.Color.White;
-            treeNode46.Name = "nodSaleRep";
-            treeNode46.Text = "Sale Report";
-            treeNode47.BackColor = System.Drawing.Color.LightSeaGreen;
-            treeNode47.ForeColor = System.Drawing.Color.White;
-            treeNode47.Name = "nodDamage";
-            treeNode47.Text = "Stock Damage";
-            treeNode48.BackColor = System.Drawing.Color.LightSeaGreen;
-            treeNode48.ForeColor = System.Drawing.Color.White;
-            treeNode48.Name = "nodStockRep";
-            treeNode48.Text = "Stock Report";
-            treeNode49.BackColor = System.Drawing.Color.LightSeaGreen;
-            treeNode49.ForeColor = System.Drawing.Color.Transparent;
-            treeNode49.Name = "nodExpRep";
-            treeNode49.Text = "Expiry Report";
-            treeNode50.BackColor = System.Drawing.Color.DarkCyan;
-            treeNode50.ForeColor = System.Drawing.Color.White;
-            treeNode50.Name = "nodStock";
-            treeNode50.Text = "Stock";
-            treeNode51.BackColor = System.Drawing.Color.LightSeaGreen;
-            treeNode51.ForeColor = System.Drawing.Color.White;
-            treeNode51.Name = "nodCusReciept";
-            treeNode51.Text = "Customer Transactions";
-            treeNode52.BackColor = System.Drawing.Color.LightSeaGreen;
-            treeNode52.ForeColor = System.Drawing.Color.White;
-            treeNode52.Name = "nodSupPay";
-            treeNode52.Text = "Supplier Transactions";
-            treeNode53.BackColor = System.Drawing.Color.LightSeaGreen;
-            treeNode53.ForeColor = System.Drawing.Color.White;
-            treeNode53.Name = "nodExpense";
-            treeNode53.Text = "Expense";
-            treeNode54.BackColor = System.Drawing.Color.LightSeaGreen;
-            treeNode54.ForeColor = System.Drawing.Color.White;
-            treeNode54.Name = "nodBankTran";
-            treeNode54.Text = "Bank Transactions";
-            treeNode55.BackColor = System.Drawing.Color.LightSeaGreen;
-            treeNode55.ForeColor = System.Drawing.Color.White;
-            treeNode55.Name = "nodEmpPay";
-            treeNode55.Text = "Employee Payments";
-            treeNode56.BackColor = System.Drawing.Color.DarkCyan;
-            treeNode56.ForeColor = System.Drawing.Color.White;
-            treeNode56.Name = "nodTran";
-            treeNode56.Text = "Transactions";
-            treeNode57.BackColor = System.Drawing.Color.LightSeaGreen;
-            treeNode57.ForeColor = System.Drawing.Color.White;
-            treeNode57.Name = "nodJournal";
-            treeNode57.Text = "General Journal";
-            treeNode58.BackColor = System.Drawing.Color.LightSeaGreen;
-            treeNode58.ForeColor = System.Drawing.Color.White;
-            treeNode58.Name = "nodCashBook";
-            treeNode58.Text = "Cash Book";
-            treeNode59.BackColor = System.Drawing.Color.LightSeaGreen;
-            treeNode59.ForeColor = System.Drawing.Color.White;
-            treeNode59.Name = "nodCusLed";
-            treeNode59.Text = "Customer Ledger";
-            treeNode60.BackColor = System.Drawing.Color.LightSeaGreen;
-            treeNode60.ForeColor = System.Drawing.Color.White;
-            treeNode60.Name = "nodSupplierLed";
-            treeNode60.Text = "Supplier Ledger";
-            treeNode61.BackColor = System.Drawing.Color.LightSeaGreen;
-            treeNode61.ForeColor = System.Drawing.Color.White;
-            treeNode61.Name = "nodBankHis";
-            treeNode61.Text = "Bank History";
-            treeNode62.BackColor = System.Drawing.Color.LightSeaGreen;
-            treeNode62.ForeColor = System.Drawing.Color.White;
-            treeNode62.Name = "nodPls";
-            treeNode62.Text = "Profit & Loss";
-            treeNode63.BackColor = System.Drawing.Color.LightSeaGreen;
-            treeNode63.ForeColor = System.Drawing.Color.White;
-            treeNode63.Name = "nodDaybook";
-            treeNode63.Text = "Day Book";
-            treeNode64.BackColor = System.Drawing.Color.LightSeaGreen;
-            treeNode64.ForeColor = System.Drawing.Color.White;
-            treeNode64.Name = "nodBalSheet";
-            treeNode64.Text = "Balance Sheet";
-            treeNode65.BackColor = System.Drawing.Color.DarkCyan;
-            treeNode65.ForeColor = System.Drawing.Color.White;
-            treeNode65.Name = "nodAcc";
-            treeNode65.Text = "Accounts";
-            treeNode66.BackColor = System.Drawing.Color.LightSeaGreen;
-            treeNode66.ForeColor = System.Drawing.Color.White;
-            treeNode66.Name = "nodChangePass";
-            treeNode66.Text = "Change Password";
-            treeNode67.BackColor = System.Drawing.Color.LightSeaGreen;
-            treeNode67.ForeColor = System.Drawing.Color.White;
-            treeNode67.Name = "nodAddUser";
-            treeNode67.Text = "Add New User";
-            treeNode68.BackColor = System.Drawing.Color.DarkCyan;
-            treeNode68.ForeColor = System.Drawing.Color.White;
-            treeNode68.Name = "nodUsers";
-            treeNode68.Text = "Users";
+            treeNode69.BackColor = System.Drawing.Color.LightSeaGreen;
+            treeNode69.ForeColor = System.Drawing.Color.White;
+            treeNode69.Name = "nodProd";
+            treeNode69.Text = "Products";
+            treeNode70.BackColor = System.Drawing.Color.LightSeaGreen;
+            treeNode70.ForeColor = System.Drawing.Color.White;
+            treeNode70.Name = "nodBank";
+            treeNode70.Text = "Bank";
+            treeNode71.BackColor = System.Drawing.Color.LightSeaGreen;
+            treeNode71.ForeColor = System.Drawing.Color.White;
+            treeNode71.Name = "nodSupplier";
+            treeNode71.Text = "Supplier";
+            treeNode72.BackColor = System.Drawing.Color.LightSeaGreen;
+            treeNode72.ForeColor = System.Drawing.Color.White;
+            treeNode72.Name = "nodCustomer";
+            treeNode72.Text = "Customer";
+            treeNode73.BackColor = System.Drawing.Color.LightSeaGreen;
+            treeNode73.ForeColor = System.Drawing.Color.White;
+            treeNode73.Name = "nodExpType";
+            treeNode73.Text = "Expense Type";
+            treeNode74.BackColor = System.Drawing.Color.DarkCyan;
+            treeNode74.ForeColor = System.Drawing.Color.White;
+            treeNode74.Name = "nodGeneral";
+            treeNode74.Text = "General";
+            treeNode75.BackColor = System.Drawing.Color.LightSeaGreen;
+            treeNode75.ForeColor = System.Drawing.Color.White;
+            treeNode75.Name = "nodPurchase";
+            treeNode75.Text = "Purchase";
+            treeNode76.BackColor = System.Drawing.Color.LightSeaGreen;
+            treeNode76.ForeColor = System.Drawing.Color.White;
+            treeNode76.Name = "nodPurchaseReview";
+            treeNode76.Text = "Purchase Review";
+            treeNode77.BackColor = System.Drawing.Color.LightSeaGreen;
+            treeNode77.ForeColor = System.Drawing.Color.White;
+            treeNode77.Name = "nodPurRep";
+            treeNode77.Text = "Purchase Report";
+            treeNode78.BackColor = System.Drawing.Color.LightSeaGreen;
+            treeNode78.ForeColor = System.Drawing.Color.White;
+            treeNode78.Name = "nodSale";
+            treeNode78.Text = "Sale";
+            treeNode79.BackColor = System.Drawing.Color.LightSeaGreen;
+            treeNode79.ForeColor = System.Drawing.Color.White;
+            treeNode79.Name = "nodSaleReview";
+            treeNode79.Text = "Sale Review";
+            treeNode80.BackColor = System.Drawing.Color.LightSeaGreen;
+            treeNode80.ForeColor = System.Drawing.Color.White;
+            treeNode80.Name = "nodSaleRep";
+            treeNode80.Text = "Sale Report";
+            treeNode81.BackColor = System.Drawing.Color.LightSeaGreen;
+            treeNode81.ForeColor = System.Drawing.Color.White;
+            treeNode81.Name = "nodDamage";
+            treeNode81.Text = "Stock Damage";
+            treeNode82.BackColor = System.Drawing.Color.LightSeaGreen;
+            treeNode82.ForeColor = System.Drawing.Color.White;
+            treeNode82.Name = "nodStockRep";
+            treeNode82.Text = "Stock Report";
+            treeNode83.BackColor = System.Drawing.Color.LightSeaGreen;
+            treeNode83.ForeColor = System.Drawing.Color.Transparent;
+            treeNode83.Name = "nodExpRep";
+            treeNode83.Text = "Expiry Report";
+            treeNode84.BackColor = System.Drawing.Color.DarkCyan;
+            treeNode84.ForeColor = System.Drawing.Color.White;
+            treeNode84.Name = "nodStock";
+            treeNode84.Text = "Stock";
+            treeNode85.BackColor = System.Drawing.Color.LightSeaGreen;
+            treeNode85.ForeColor = System.Drawing.Color.White;
+            treeNode85.Name = "nodCusReciept";
+            treeNode85.Text = "Customer Transactions";
+            treeNode86.BackColor = System.Drawing.Color.LightSeaGreen;
+            treeNode86.ForeColor = System.Drawing.Color.White;
+            treeNode86.Name = "nodSupPay";
+            treeNode86.Text = "Supplier Transactions";
+            treeNode87.BackColor = System.Drawing.Color.LightSeaGreen;
+            treeNode87.ForeColor = System.Drawing.Color.White;
+            treeNode87.Name = "nodExpense";
+            treeNode87.Text = "Expense";
+            treeNode88.BackColor = System.Drawing.Color.LightSeaGreen;
+            treeNode88.ForeColor = System.Drawing.Color.White;
+            treeNode88.Name = "nodBankTran";
+            treeNode88.Text = "Bank Transactions";
+            treeNode89.BackColor = System.Drawing.Color.LightSeaGreen;
+            treeNode89.ForeColor = System.Drawing.Color.White;
+            treeNode89.Name = "nodEmpPay";
+            treeNode89.Text = "Employee Payments";
+            treeNode90.BackColor = System.Drawing.Color.DarkCyan;
+            treeNode90.ForeColor = System.Drawing.Color.White;
+            treeNode90.Name = "nodTran";
+            treeNode90.Text = "Transactions";
+            treeNode91.BackColor = System.Drawing.Color.LightSeaGreen;
+            treeNode91.ForeColor = System.Drawing.Color.White;
+            treeNode91.Name = "nodJournal";
+            treeNode91.Text = "General Journal";
+            treeNode92.BackColor = System.Drawing.Color.LightSeaGreen;
+            treeNode92.ForeColor = System.Drawing.Color.White;
+            treeNode92.Name = "nodCashBook";
+            treeNode92.Text = "Cash Book";
+            treeNode93.BackColor = System.Drawing.Color.LightSeaGreen;
+            treeNode93.ForeColor = System.Drawing.Color.White;
+            treeNode93.Name = "nodCusLed";
+            treeNode93.Text = "Customer Ledger";
+            treeNode94.BackColor = System.Drawing.Color.LightSeaGreen;
+            treeNode94.ForeColor = System.Drawing.Color.White;
+            treeNode94.Name = "nodSupplierLed";
+            treeNode94.Text = "Supplier Ledger";
+            treeNode95.BackColor = System.Drawing.Color.LightSeaGreen;
+            treeNode95.ForeColor = System.Drawing.Color.White;
+            treeNode95.Name = "nodBankHis";
+            treeNode95.Text = "Bank History";
+            treeNode96.BackColor = System.Drawing.Color.LightSeaGreen;
+            treeNode96.ForeColor = System.Drawing.Color.White;
+            treeNode96.Name = "nodPls";
+            treeNode96.Text = "Profit & Loss";
+            treeNode97.BackColor = System.Drawing.Color.LightSeaGreen;
+            treeNode97.ForeColor = System.Drawing.Color.White;
+            treeNode97.Name = "nodDaybook";
+            treeNode97.Text = "Day Book";
+            treeNode98.BackColor = System.Drawing.Color.LightSeaGreen;
+            treeNode98.ForeColor = System.Drawing.Color.White;
+            treeNode98.Name = "nodBalSheet";
+            treeNode98.Text = "Balance Sheet";
+            treeNode99.BackColor = System.Drawing.Color.DarkCyan;
+            treeNode99.ForeColor = System.Drawing.Color.White;
+            treeNode99.Name = "nodAcc";
+            treeNode99.Text = "Accounts";
+            treeNode100.BackColor = System.Drawing.Color.LightSeaGreen;
+            treeNode100.ForeColor = System.Drawing.Color.White;
+            treeNode100.Name = "nodChangePass";
+            treeNode100.Text = "Change Password";
+            treeNode101.BackColor = System.Drawing.Color.LightSeaGreen;
+            treeNode101.ForeColor = System.Drawing.Color.White;
+            treeNode101.Name = "nodAddUser";
+            treeNode101.Text = "Add New User";
+            treeNode102.BackColor = System.Drawing.Color.DarkCyan;
+            treeNode102.ForeColor = System.Drawing.Color.White;
+            treeNode102.Name = "nodUsers";
+            treeNode102.Text = "Users";
             this.treeMain.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode40,
-            treeNode50,
-            treeNode56,
-            treeNode65,
-            treeNode68});
+            treeNode74,
+            treeNode84,
+            treeNode90,
+            treeNode99,
+            treeNode102});
             this.treeMain.RightToLeftLayout = true;
             this.treeMain.ShowLines = false;
             this.treeMain.ShowNodeToolTips = true;
@@ -1742,7 +1749,7 @@
             this.pnlReports.Controls.Add(this.pnlRepCom);
             this.pnlReports.Location = new System.Drawing.Point(304, 376);
             this.pnlReports.Name = "pnlReports";
-            this.pnlReports.Size = new System.Drawing.Size(1119, 144);
+            this.pnlReports.Size = new System.Drawing.Size(1119, 143);
             this.pnlReports.TabIndex = 30;
             // 
             // pnlInvoice
@@ -1752,7 +1759,7 @@
             this.pnlInvoice.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlInvoice.Location = new System.Drawing.Point(998, 0);
             this.pnlInvoice.Name = "pnlInvoice";
-            this.pnlInvoice.Size = new System.Drawing.Size(124, 144);
+            this.pnlInvoice.Size = new System.Drawing.Size(124, 143);
             this.pnlInvoice.TabIndex = 32;
             // 
             // lblInvoice
@@ -1774,7 +1781,7 @@
             this.pnlManufactRep.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlManufactRep.Location = new System.Drawing.Point(748, 0);
             this.pnlManufactRep.Name = "pnlManufactRep";
-            this.pnlManufactRep.Size = new System.Drawing.Size(250, 144);
+            this.pnlManufactRep.Size = new System.Drawing.Size(250, 143);
             this.pnlManufactRep.TabIndex = 34;
             // 
             // lblConsumeRep
@@ -1828,7 +1835,7 @@
             this.pnlOrdersRep.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlOrdersRep.Location = new System.Drawing.Point(624, 0);
             this.pnlOrdersRep.Name = "pnlOrdersRep";
-            this.pnlOrdersRep.Size = new System.Drawing.Size(124, 144);
+            this.pnlOrdersRep.Size = new System.Drawing.Size(124, 143);
             this.pnlOrdersRep.TabIndex = 33;
             // 
             // pbOrderActRep
@@ -1862,7 +1869,7 @@
             this.pnlPls.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlPls.Location = new System.Drawing.Point(374, 0);
             this.pnlPls.Name = "pnlPls";
-            this.pnlPls.Size = new System.Drawing.Size(250, 144);
+            this.pnlPls.Size = new System.Drawing.Size(250, 143);
             this.pnlPls.TabIndex = 32;
             this.pnlPls.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlPls_Paint);
             // 
@@ -1909,7 +1916,7 @@
             this.pnlRepCom.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlRepCom.Location = new System.Drawing.Point(0, 0);
             this.pnlRepCom.Name = "pnlRepCom";
-            this.pnlRepCom.Size = new System.Drawing.Size(374, 144);
+            this.pnlRepCom.Size = new System.Drawing.Size(374, 143);
             this.pnlRepCom.TabIndex = 31;
             this.pnlRepCom.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlRepCom_Paint);
             // 
@@ -1917,7 +1924,7 @@
             // 
             this.lblCusLedger.Location = new System.Drawing.Point(254, 91);
             this.lblCusLedger.Name = "lblCusLedger";
-            this.lblCusLedger.Size = new System.Drawing.Size(121, 53);
+            this.lblCusLedger.Size = new System.Drawing.Size(121, 52);
             this.lblCusLedger.TabIndex = 34;
             this.lblCusLedger.Text = "Customer Ledger";
             this.lblCusLedger.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -2055,13 +2062,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Pending Orders";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // mtmAutoDiscount
-            // 
-            this.mtmAutoDiscount.Name = "mtmAutoDiscount";
-            this.mtmAutoDiscount.Size = new System.Drawing.Size(241, 26);
-            this.mtmAutoDiscount.Text = "Auto Discount";
-            this.mtmAutoDiscount.Visible = false;
             // 
             // frmDashboard
             // 

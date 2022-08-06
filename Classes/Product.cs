@@ -13,13 +13,15 @@ namespace prjGrow.Classes
         public string code { get; set; }
         public string prod_name { get; set; }
         public Int64 type { get; set; }
+        public double cost { get; set; }
+        public double whole { get; set; }
+        public double retail { get; set; }
         public Int64 opening_stock { get; set; }
         public Int64 min_stock { get; set; }
         public string unit { get; set; }
         public Stock stock { get; set; }
 
         public int term_id = 0;
-
         public DataTable tblData = null;
         public DataTable tblProd = null;
         public DataTable tblUnit = new DataTable();
@@ -158,12 +160,12 @@ namespace prjGrow.Classes
             SqlTransaction tran = db.con.BeginTransaction();
             try
             {
-                db.query = "insert into Product(prod_code, prod_name, type, category, unit, min_stock" + sqlLine;
+                db.query = "insert into Product(prod_code, prod_name, type, cost, whole, retail, category, unit, min_stock" + sqlLine;
                 db.query += ", uid)" + sqlLine;
-                db.query += " values('" + code + "','" + prod_name + "'," + type + ", " + category + ",'" + unit + "', 0," + User.curUid + ")" + sqlLine;
+                db.query += " values('" + code + "','" + prod_name + "'," + type + "," + cost + "," + whole + "," + retail + "," + category + ",'" + unit + "', 0," + User.curUid + ")" + sqlLine;
 
                 result = db.runQuery(tran);
-                
+
                 if (result && ( costs || opening))
                 {
                     result = stock.saveCosts(tran);
@@ -195,7 +197,10 @@ namespace prjGrow.Classes
                 db.query += "prod_code = '" + code + "', " + sqlLine;
                 db.query += "prod_name = '" + prod_name + "', " + sqlLine;
                 db.query += "type = " + type + "," + sqlLine;
-                db.query += "category = " + category + "" + sqlLine;
+                db.query += "category = " + category + "," + sqlLine;
+                db.query += "cost = " + cost + "," + sqlLine;
+                db.query += "whole = " + whole + "," + sqlLine;
+                db.query += "retail = " + retail + "" + sqlLine;
                 db.query += "where id = " + this.id + sqlLine;
 
                 result = db.runQuery(tran);

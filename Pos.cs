@@ -16,7 +16,7 @@ namespace prjGrow
         public static bool mod_manufact = false, mod_bakers = false, mod_mobile = false, mod_fnb = false;
 
         //Customize Features
-        public static bool fet_wsale = false, fet_bcode = false, fet_item_dist = false, fet_freight = false, fet_sup_order = false;
+        public static bool fet_wsale = false, fet_bcode = false, fet_item_dist = false, fet_freight = false, fet_sup_order = false, fet_cus_order = false;
 
         public static string client_name = "";
         public static string client_adrs = "";

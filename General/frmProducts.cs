@@ -36,7 +36,7 @@ namespace prjGrow.General
             prod.disabled = true;
             tblProd = prod.getProducts();
             dgvData.DataSource = tblProd;
-            
+
             com.hideColumns(dgvData, new string[] { Product.col_id, Product.col_prod_type_id });
             com.enableColumns(dgvData, new string[] { Product.col_opening_stock }, chkStock.Checked);
             com.enableColumns(dgvData, new string[] { Product.col_cost, Product.col_whole, Product.col_retail }, chkCost.Checked);
@@ -53,8 +53,6 @@ namespace prjGrow.General
             }
             if (rbRaw.Checked || rbStock.Checked)
                 com.enableColumns(dgvData, new string[]{ Product.col_cost, Product.col_whole, Product.col_retail}, chkCost.Checked);
-/*            if (rbServ.Enabled)
-            */
         }
 
         void customize()
@@ -200,7 +198,7 @@ namespace prjGrow.General
             prod.code = txtProdCode.Text;
             prod.prod_name = txtProdName.Text;
             prod.type = Convert.ToInt64(cmbType.SelectedValue);
-            
+
             if (rbRaw.Checked || rbPartial.Checked || rbCake.Checked)
                 prod.unit = cmbUnit.SelectedValue == null ? "" : cmbUnit.Text;
             else
@@ -214,9 +212,14 @@ namespace prjGrow.General
             else if (rbPartial.Checked) prod.category = Constants.cate_partial;
 
             prod.stock = new Stock();
-            prod.stock.cost = Convert.ToDouble(numCost.Value);
-            prod.stock.retail = Convert.ToInt64(numRetail.Value);
-            prod.stock.whole = Convert.ToDouble(numWhole.Value) > 0 ? Convert.ToDouble(numWhole.Value) : prod.stock.retail;
+
+            prod.cost = Convert.ToDouble(numCost.Value);
+            prod.retail = Convert.ToInt64(numRetail.Value);
+            prod.whole = Convert.ToDouble(numWhole.Value) > 0 ? Convert.ToDouble(numWhole.Value) : prod.stock.retail;
+
+            prod.stock.cost = prod.cost;
+            prod.stock.retail = prod.retail;
+            prod.stock.whole = prod.whole;
             prod.stock.dr = Convert.ToInt64(numStock.Value);
             prod.stock.term_id = Custom.client_id_active == 1 || Custom.client_id_active == 7 ? Constants.term_store : Constants.term_shop;
             if(Custom.client_id_active == 2)
@@ -436,8 +439,7 @@ namespace prjGrow.General
             if(Custom.client_id_active == 5)
                 gbOptions.Visible = true;
 
-        //    chkCost.Checked = true;
-            if(rbGadget.Checked && !(Custom.client_id_active == 7))
+            if (rbGadget.Checked && !(Custom.client_id_active == 7 || Custom.client_id_active == 9))
                 chkStock.Visible = pnlStock.Visible = false;
 
             if (rbGadget.Checked)
@@ -445,9 +447,9 @@ namespace prjGrow.General
             if (Custom.mod_manufact && rbGadget.Checked )
             {
                 pnlRetail.Visible = chkCost.Checked && Custom.mod_manufact;       //for Manufacturung user will enter cost for Gadgets
-                pnlWhole.Visible = pnlRetail.Visible = chkCost.Checked && Custom.client_id_active == 7; 
+                pnlWhole.Visible = pnlRetail.Visible = chkCost.Checked && (Custom.client_id_active == 7 || Custom.client_id_active == 9); 
                 com.showColumns(dgvData, new string[]{ Product.col_retail });
-                if(Custom.client_id_active == 7)
+                if (Custom.client_id_active == 7 || Custom.client_id_active == 9)
                     com.hideColumns(dgvData, new string[] { Product.col_cost });
                 else
                     com.hideColumns(dgvData, new string[] { Product.col_whole, Product.col_cost });
@@ -548,11 +550,6 @@ namespace prjGrow.General
         {
             clear();
             loadProducts();
-        }
-
-        private void dgvData_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

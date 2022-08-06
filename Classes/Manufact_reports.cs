@@ -27,7 +27,7 @@ namespace prjGrow.Classes
         {
             setBounds(year, month, date);
 
-            string procName = Custom.client_id_active == 7 ? "repConsumeSimple" : "repConsume";
+            string procName = Custom.client_id_active == 7 || Custom.client_id_active == 9 ? "repConsumeSimple" : "repConsume";
 
             db.query = "Exec " + procName + " @sdate = '" + sdate + "', @edate = '" + edate + "'" + sqlLine;
             db.runQuery();

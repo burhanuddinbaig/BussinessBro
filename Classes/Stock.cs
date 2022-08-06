@@ -76,7 +76,10 @@ namespace prjGrow.Classes
 
         public DataTable getSaleStock(long tranId)
         {
-            db.query = "select s.id as [" + col_id + "], s.tran_id as [" + col_tran_id + "], s.prod_id as [" + col_prod_id + "], p.prod_name as [" + Product.col_prod_name + "], s.cost as [" + col_cost + "], cr as [" + col_qty + "], sold as [" + col_sold + "], cr * sold as [" + col_amount + "], p.category as [" + Product.col_cate + "], s.dist as "+col_item_dist+"" + sqlLine;
+            db.query = "select s.id as [" + col_id + "], s.tran_id as [" + col_tran_id + "], s.prod_id as [" + col_prod_id + "], p.prod_name as [" + Product.col_prod_name + "]," + sqlLine;
+            db.query += "s.cost as [" + col_cost + "], cr as [" + col_qty + "], cr as [" + col_qty_init + "], sold as [" + col_sold + "]," + sqlLine;
+            db.query += "cr * sold as [" + col_amount + "], p.category as [" + Product.col_cate + "], s.dist as " + col_item_dist + "" + sqlLine;
+            db.query += ", (select sum(st.dr) - sum(st.cr) from stock st where st.prod_id = s.prod_id) as ["+ col_stock +"]" + sqlLine;
             db.query += "from Stock s inner join product p on s.prod_id = p.id" + sqlLine;
             db.query += "where s.status = " + Constants.status_active + " and (p.status = " + Constants.status_active + " or p.status = "+Constants.status_disabled+")" + sqlLine;
             db.query += "and s.cr > 0 and tran_id = " + tranId + " and s.sold > 0" + sqlLine;
@@ -104,7 +107,7 @@ namespace prjGrow.Classes
                 cost = Convert.ToDouble(row[col_cost].ToString());
                 whole = Convert.ToDouble(row[col_whole].ToString());
                 retail = Convert.ToInt64(row[col_retail].ToString());
-                
+
                 if (Custom.fet_freight)
                     freight = (float)Convert.ToDouble(row[col_frieght].ToString());
                 else
@@ -120,6 +123,16 @@ namespace prjGrow.Classes
                 if (expiryitem) db.query += ", '" + expiry + "'" + sqlLine;
                 db.query += ", " + term_id + sqlLine;
                 db.query += ", " + User.curUid + ")" + sqlLine;
+                result = db.runQuery(tran);
+
+                if (!result)
+                    return false;
+                db.query = "update product set" + sqlLine;
+                db.query += "cost = " + cost + "," + sqlLine;
+                db.query += "whole = " + whole + "," + sqlLine;
+                db.query += "retail = " + retail + "" + sqlLine;
+                db.query += "where id = " + prod_id + sqlLine;
+
                 result = db.runQuery(tran);
 
                 if (!result)
@@ -140,7 +153,7 @@ namespace prjGrow.Classes
 
             return db.getDataTable();
         }
-        
+
         public bool saveDamageStock(SqlTransaction tran, long tranId, long prodId, long qty, long cost)
         {
             db.query = "insert into Stock(tran_id, prod_id, cr, cost, uid)" + Environment.NewLine;
@@ -180,19 +193,19 @@ namespace prjGrow.Classes
             db.query += expiryitem ? ", expiry" : "" + sqlLine;
             db.query += ", uid)" + sqlLine;
             db.query += "values(" + prod_id + "," + cost + "," + retail + "," + whole + "," + dr + ", 0, "+term_id+"" + sqlLine;
-            db.query += expiryitem ? ", '" + expiry + "'" : "" + sqlLine;
+            db.query += expiryitem ? ",'" + expiry + "'" : "" + sqlLine;
             db.query += ", 0)" + sqlLine;
 
             return db.runQuery(tran);
         }
-        
+
         public bool updateCosts(SqlTransaction tran)
         {
             delStock(tran, 0, prod_id);
 
             if(result)
                 result = saveCosts(tran);
-            
+
             return result;
         }
 
@@ -218,7 +231,7 @@ namespace prjGrow.Classes
             }
             return result;
         }
-        
+
         public bool saveRaw(SqlTransaction tran, DataTable tblRaw, long tran_id)
         {
             if (tblRaw.Rows.Count <= 0)

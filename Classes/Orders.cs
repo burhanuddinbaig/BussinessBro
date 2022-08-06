@@ -63,6 +63,7 @@ namespace prjGrow.Classes
             tblCart.Columns.Add(col_advance, typeof(long));
             tblCart.Columns.Add(col_progress, typeof(long));
         }
+
         public void saveOrder()
         {
             getAccIds();
@@ -214,11 +215,6 @@ namespace prjGrow.Classes
                                 cus.cr = adv;
                                 result = cus.addCusLedger(tran);*/
             }
-
-/*            if (result)
-                result = credit(tran, date, "Customer Order", acc_id_order, total);
-            if(result && discount > 0)
-                result = debit(tran, date, "Discount on Customer Order", acc_id_discount, discount);*/
             return result;
         }
         public void delOrder()

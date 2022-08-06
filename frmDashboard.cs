@@ -69,27 +69,26 @@ namespace prjGrow
 
         void customDashboard()
         {
-
-            pnlOrder.Visible = (Custom.mod_manufact && !(Custom.client_id_active == 7)) || Custom.mod_bakers;
+            pnlOrder.Visible = Custom.mod_bakers || Custom.fet_cus_order;
             pnlManufacture.Visible = Custom.mod_manufact;
             pnlManufactRep.Visible = Custom.mod_manufact || Custom.mod_fnb;
-            pnlOrdersRep.Visible = (Custom.mod_manufact && !(Custom.client_id_active == 7)) || Custom.mod_bakers;
+            pnlOrdersRep.Visible = Custom.mod_bakers || Custom.fet_cus_order;
             menuManufacture.Visible = Custom.mod_manufact || Custom.mod_fnb;
             pnlLogistic.Visible = Custom.mod_bakers || Custom.mod_manufact;
             pnlImei.Visible = Custom.mod_mobile;
-            pnlOrderProg.Visible = Custom.mod_manufact;
+            pnlOrderProg.Visible = Custom.mod_manufact && Custom.fet_cus_order;
             pnlInvoice.Visible = !(Custom.client_id_active == 5);
 
             mtmTables.Visible = Custom.mod_fnb;
             mtmComp.Visible = Custom.mod_fnb;
             mtmSale.Visible = !Custom.mod_fnb;
             mtmSaleReview.Visible = !Custom.mod_fnb;
-            mtmOrder.Visible = (Custom.mod_manufact && !(Custom.client_id_active == 7)) || Custom.mod_bakers;
-            mtmCusOrder.Visible = Custom.mod_bakers;
-            mtmOrderReview.Visible = (Custom.mod_manufact && !(Custom.client_id_active == 7)) || Custom.mod_bakers;
+            mtmOrder.Visible = Custom.mod_bakers || Custom.fet_cus_order;
+            mtmCusOrder.Visible = Custom.mod_bakers || Custom.fet_cus_order;
+            mtmOrderReview.Visible = Custom.mod_bakers || Custom.fet_cus_order;
             mtmBarcode.Visible = Custom.mod_bakers || Custom.mod_mobile;
-            mtmOrdAct.Visible = (Custom.mod_manufact && !(Custom.client_id_active == 7)) || Custom.mod_bakers;
-            mtmOrderProg.Visible = sepOrder.Visible = Custom.client_id_active == 2;
+            mtmOrdAct.Visible = Custom.mod_bakers || Custom.fet_cus_order;
+            mtmOrderProg.Visible = sepOrder.Visible = Custom.client_id_active == 2 || Custom.fet_cus_order;
             mtmFoodOrder.Visible = mtmFoodReview.Visible = Custom.mod_fnb;
             mtmExpiryRep.Visible = Custom.mod_bakers;
             mtmAutoConsume.Visible = Custom.client_id_active == 5;
@@ -100,7 +99,7 @@ namespace prjGrow
             mtmVehicle.Visible = Custom.client_id_active == 7;
             mtmIMEI.Visible = Custom.mod_mobile;
 
-            pnlOrdersDisp.Visible = Custom.mod_manufact && !(Custom.client_id_active == 7);
+            pnlOrdersDisp.Visible = Custom.fet_cus_order;
             if (pnlOrdersDisp.Visible)
                 showOrdersOnDashboard();
 
@@ -172,7 +171,7 @@ namespace prjGrow
                 mtmEmpLed.Enabled = mtmEmpPay.Enabled = true;
                 mtmBankLed.Enabled = mtmBankTran.Enabled = true;
             }
-            if (Custom.client_id_active == 7)
+            if (Custom.client_id_active == 7 || Custom.client_id_active == 15)
             {
                 mtmProcess.Enabled = pnlManufacture.Enabled = isAdmin;
                 mtmProcessReview.Enabled = isAdmin;

@@ -7,14 +7,14 @@ using System.Data;
 
 namespace prjGrow.Classes
 {
-    public class Custom : Pos		//Custom
+    public class Custom : Pos
     {
         clsDb db = new clsDb();
         DataTable tblMod = null;
 
         public static bool largeScreen = false;
-        public static string ip_adrs = /*"192.168.1.99";//*/".";
-        public static long client_id_active = 2;
+        public static string ip_adrs = ".";                                     /*"192.168.1.99";//*/
+        public static long client_id_active = Constants.CLT_SAFE_RIDERS;
         public static string col_feat_id = "feat_id", col_status = "status";
         public static string col_full_name = "full_name", col_adrs = "address", col_cell = "cell", col_phone = "phone", col_email = "email", col_qoute = "qoute";
         string tmpStr = "";
@@ -56,6 +56,9 @@ namespace prjGrow.Classes
 
             tmpRow = tblMod.Select(col_feat_id + " = 9", "");
             fet_sup_order = tmpRow.Length > 0;
+
+            tmpRow = tblMod.Select(col_feat_id + " = 10", "");
+            fet_cus_order = tmpRow.Length > 0;
 
             db.query = "select full_name as "+col_full_name+", adrs as "+col_adrs+", cell as "+col_cell+", phone as "+col_phone+", email as "+col_email+", qoute as "+col_qoute+"" + sqlLine;
             db.query += "from Client where id = " + client_id_active + sqlLine;

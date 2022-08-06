@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSale));
-            this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.txtReference = new System.Windows.Forms.TextBox();
             this.rbRetail = new System.Windows.Forms.RadioButton();
@@ -58,6 +57,9 @@
             this.btnSupOrder = new System.Windows.Forms.Button();
             this.lblCp = new System.Windows.Forms.Label();
             this.flpSale = new System.Windows.Forms.FlowLayoutPanel();
+            this.pnlDescrip = new System.Windows.Forms.Panel();
+            this.txtDescrip = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.dgvData = new System.Windows.Forms.DataGridView();
             this.Remove = new System.Windows.Forms.DataGridViewImageColumn();
             this.CP = new System.Windows.Forms.DataGridViewImageColumn();
@@ -81,6 +83,28 @@
             this.cmbCell = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
             this.pnlCell = new System.Windows.Forms.Panel();
+            this.pnlCellNo = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.cmbCellNo = new System.Windows.Forms.ComboBox();
+            this.chkOrder = new System.Windows.Forms.CheckBox();
+            this.pnlLeft = new System.Windows.Forms.Panel();
+            this.pnl1 = new System.Windows.Forms.Panel();
+            this.btnBnk = new System.Windows.Forms.Button();
+            this.btnCus = new System.Windows.Forms.Button();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.numBal = new System.Windows.Forms.NumericUpDown();
+            this.dtpSaleDate = new System.Windows.Forms.DateTimePicker();
+            this.cmbCus = new System.Windows.Forms.ComboBox();
+            this.cmbBnk = new System.Windows.Forms.ComboBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.pnlTimeline = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.dtpTimelineDate = new System.Windows.Forms.DateTimePicker();
+            this.pnlOrder = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.dtpTimelineTime = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.numInvoiceno)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numClientBal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numChange)).BeginInit();
@@ -88,6 +112,7 @@
             this.pnlEmp.SuspendLayout();
             this.pnlVeh.SuspendLayout();
             this.flpSale.SuspendLayout();
+            this.pnlDescrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             this.pnlTots.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numAmt)).BeginInit();
@@ -96,6 +121,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.numDiscount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPaid)).BeginInit();
             this.pnlCell.SuspendLayout();
+            this.pnlCellNo.SuspendLayout();
+            this.pnlLeft.SuspendLayout();
+            this.pnl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numBal)).BeginInit();
+            this.pnlTimeline.SuspendLayout();
+            this.pnlOrder.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblClient
@@ -103,7 +135,7 @@
             this.lblClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClient.Location = new System.Drawing.Point(9, 4);
             this.lblClient.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.lblClient.Size = new System.Drawing.Size(1359, 48);
+            this.lblClient.Size = new System.Drawing.Size(1347, 48);
             // 
             // lblMsg
             // 
@@ -115,7 +147,7 @@
             // 
             this.lblTitle.Location = new System.Drawing.Point(9, 52);
             this.lblTitle.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.lblTitle.Size = new System.Drawing.Size(1359, 33);
+            this.lblTitle.Size = new System.Drawing.Size(1347, 33);
             // 
             // label1
             // 
@@ -126,46 +158,44 @@
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(-10, 671);
+            this.label2.Location = new System.Drawing.Point(-75, 694);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Visible = false;
             // 
             // numInvoiceno
             // 
-            this.numInvoiceno.Location = new System.Drawing.Point(73, 666);
+            this.numInvoiceno.Location = new System.Drawing.Point(-61, 674);
             this.numInvoiceno.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
-            this.numInvoiceno.Size = new System.Drawing.Size(10, 29);
+            this.numInvoiceno.Size = new System.Drawing.Size(15, 29);
             this.numInvoiceno.Visible = false;
             // 
             // dtpDate
             // 
             this.dtpDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDate.Location = new System.Drawing.Point(15, 400);
+            this.dtpDate.Location = new System.Drawing.Point(4, 670);
             this.dtpDate.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
-            this.dtpDate.Size = new System.Drawing.Size(219, 31);
+            this.dtpDate.Size = new System.Drawing.Size(10, 31);
             this.dtpDate.TabStop = false;
             // 
             // cmbClient
             // 
-            this.cmbClient.Location = new System.Drawing.Point(15, 148);
+            this.cmbClient.Location = new System.Drawing.Point(-56, 674);
             this.cmbClient.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
-            this.cmbClient.Size = new System.Drawing.Size(219, 32);
+            this.cmbClient.Size = new System.Drawing.Size(10, 32);
             this.cmbClient.TabIndex = 22;
-            this.cmbClient.SelectedValueChanged += new System.EventHandler(this.cmbClient_SelectedValueChanged);
-            this.cmbClient.TextChanged += new System.EventHandler(this.cmbClient_TextChanged);
-            this.cmbClient.Leave += new System.EventHandler(this.cmbClient_Leave);
+            this.cmbClient.Visible = false;
             // 
             // lblProdCode
             // 
             this.lblProdCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProdCode.Location = new System.Drawing.Point(243, 120);
+            this.lblProdCode.Location = new System.Drawing.Point(245, 120);
             this.lblProdCode.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblProdCode.Size = new System.Drawing.Size(138, 24);
             // 
             // txtProdCode
             // 
             this.txtProdCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProdCode.Location = new System.Drawing.Point(392, 117);
+            this.txtProdCode.Location = new System.Drawing.Point(391, 117);
             this.txtProdCode.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.txtProdCode.Size = new System.Drawing.Size(219, 31);
             this.txtProdCode.TabIndex = 31;
@@ -181,18 +211,19 @@
             // 
             // label7
             // 
-            this.label7.Location = new System.Drawing.Point(-6, 683);
+            this.label7.Location = new System.Drawing.Point(0, 736);
             this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label7.Size = new System.Drawing.Size(13, 9);
+            this.label7.Size = new System.Drawing.Size(76, 64);
             this.label7.Visible = false;
             // 
             // label8
             // 
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(11, 374);
+            this.label8.Location = new System.Drawing.Point(-105, 694);
             this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label8.Size = new System.Drawing.Size(58, 24);
             this.label8.Text = "Date:";
+            this.label8.Visible = false;
             // 
             // txtProdName
             // 
@@ -213,25 +244,22 @@
             // 
             // cmbBank
             // 
-            this.cmbBank.Location = new System.Drawing.Point(15, 275);
+            this.cmbBank.Location = new System.Drawing.Point(-35, 686);
             this.cmbBank.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
-            this.cmbBank.Size = new System.Drawing.Size(219, 32);
+            this.cmbBank.Size = new System.Drawing.Size(10, 32);
             this.cmbBank.TabIndex = 23;
-            this.cmbBank.SelectedIndexChanged += new System.EventHandler(this.cmbBank_SelectedIndexChanged);
-            this.cmbBank.TextChanged += new System.EventHandler(this.cmbBank_TextChanged);
-            this.cmbBank.Leave += new System.EventHandler(this.cmbBank_Leave);
             // 
             // label9
             // 
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(12, 249);
+            this.label9.Location = new System.Drawing.Point(-30, 711);
             this.label9.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label9.Size = new System.Drawing.Size(62, 24);
             // 
             // label10
             // 
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(11, 182);
+            this.label10.Location = new System.Drawing.Point(-30, 711);
             this.label10.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label10.Size = new System.Drawing.Size(91, 24);
             // 
@@ -239,9 +267,9 @@
             // 
             this.numClientBal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numClientBal.ForeColor = System.Drawing.Color.White;
-            this.numClientBal.Location = new System.Drawing.Point(15, 207);
+            this.numClientBal.Location = new System.Drawing.Point(-45, 675);
             this.numClientBal.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
-            this.numClientBal.Size = new System.Drawing.Size(219, 31);
+            this.numClientBal.Size = new System.Drawing.Size(10, 31);
             // 
             // label11
             // 
@@ -251,17 +279,17 @@
             // 
             // btnBank
             // 
-            this.btnBank.Location = new System.Drawing.Point(162, 246);
+            this.btnBank.Location = new System.Drawing.Point(163, 835);
             this.btnBank.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
-            this.btnBank.Size = new System.Drawing.Size(73, 28);
+            this.btnBank.Size = new System.Drawing.Size(10, 28);
             this.btnBank.TabStop = false;
             this.btnBank.Click += new System.EventHandler(this.btnBank_Click);
             // 
             // btnClient
             // 
-            this.btnClient.Location = new System.Drawing.Point(162, 119);
+            this.btnClient.Location = new System.Drawing.Point(163, 799);
             this.btnClient.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
-            this.btnClient.Size = new System.Drawing.Size(72, 28);
+            this.btnClient.Size = new System.Drawing.Size(10, 28);
             this.btnClient.TabStop = false;
             this.btnClient.Click += new System.EventHandler(this.btnClient_Click);
             // 
@@ -273,24 +301,12 @@
             this.btnProduct.TabStop = false;
             this.btnProduct.Click += new System.EventHandler(this.btnProduct_Click);
             // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.Transparent;
-            this.label19.Location = new System.Drawing.Point(12, 121);
-            this.label19.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(105, 24);
-            this.label19.TabIndex = 68;
-            this.label19.Text = "Customer:";
-            // 
             // label20
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.Transparent;
-            this.label20.Location = new System.Drawing.Point(13, 315);
+            this.label20.Location = new System.Drawing.Point(11, 268);
             this.label20.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(113, 24);
@@ -300,7 +316,7 @@
             // txtReference
             // 
             this.txtReference.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtReference.Location = new System.Drawing.Point(15, 339);
+            this.txtReference.Location = new System.Drawing.Point(10, 295);
             this.txtReference.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.txtReference.MaxLength = 50;
             this.txtReference.Name = "txtReference";
@@ -313,7 +329,7 @@
             this.rbRetail.Checked = true;
             this.rbRetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbRetail.ForeColor = System.Drawing.Color.Transparent;
-            this.rbRetail.Location = new System.Drawing.Point(16, 438);
+            this.rbRetail.Location = new System.Drawing.Point(10, 3);
             this.rbRetail.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.rbRetail.Name = "rbRetail";
             this.rbRetail.Size = new System.Drawing.Size(80, 28);
@@ -328,7 +344,7 @@
             this.rbWhole.AutoSize = true;
             this.rbWhole.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbWhole.ForeColor = System.Drawing.Color.Transparent;
-            this.rbWhole.Location = new System.Drawing.Point(99, 438);
+            this.rbWhole.Location = new System.Drawing.Point(94, 4);
             this.rbWhole.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.rbWhole.Name = "rbWhole";
             this.rbWhole.Size = new System.Drawing.Size(135, 28);
@@ -354,7 +370,7 @@
             this.chkBill.AutoSize = true;
             this.chkBill.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkBill.ForeColor = System.Drawing.Color.Transparent;
-            this.chkBill.Location = new System.Drawing.Point(16, 472);
+            this.chkBill.Location = new System.Drawing.Point(10, 35);
             this.chkBill.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.chkBill.Name = "chkBill";
             this.chkBill.Size = new System.Drawing.Size(206, 28);
@@ -379,7 +395,7 @@
             // btnOrder
             // 
             this.btnOrder.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOrder.Location = new System.Drawing.Point(586, 3);
+            this.btnOrder.Location = new System.Drawing.Point(598, 3);
             this.btnOrder.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.btnOrder.Name = "btnOrder";
             this.btnOrder.Size = new System.Drawing.Size(180, 33);
@@ -468,7 +484,7 @@
             this.pnlEmp.Location = new System.Drawing.Point(6, 3);
             this.pnlEmp.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.pnlEmp.Name = "pnlEmp";
-            this.pnlEmp.Size = new System.Drawing.Size(286, 32);
+            this.pnlEmp.Size = new System.Drawing.Size(298, 32);
             this.pnlEmp.TabIndex = 96;
             this.pnlEmp.Visible = false;
             // 
@@ -476,7 +492,7 @@
             // 
             this.cmbEmp.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cmbEmp.FormattingEnabled = true;
-            this.cmbEmp.Location = new System.Drawing.Point(105, 0);
+            this.cmbEmp.Location = new System.Drawing.Point(112, 0);
             this.cmbEmp.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.cmbEmp.Name = "cmbEmp";
             this.cmbEmp.Size = new System.Drawing.Size(180, 33);
@@ -497,7 +513,7 @@
             // 
             this.pnlVeh.Controls.Add(this.cmbVeh);
             this.pnlVeh.Controls.Add(this.label24);
-            this.pnlVeh.Location = new System.Drawing.Point(304, 3);
+            this.pnlVeh.Location = new System.Drawing.Point(316, 3);
             this.pnlVeh.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.pnlVeh.Name = "pnlVeh";
             this.pnlVeh.Size = new System.Drawing.Size(270, 32);
@@ -619,13 +635,48 @@
             // 
             // flpSale
             // 
+            this.flpSale.Controls.Add(this.pnlDescrip);
             this.flpSale.Controls.Add(this.dgvData);
             this.flpSale.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flpSale.Location = new System.Drawing.Point(241, 155);
+            this.flpSale.Location = new System.Drawing.Point(241, 150);
             this.flpSale.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.flpSale.Name = "flpSale";
-            this.flpSale.Size = new System.Drawing.Size(842, 471);
+            this.flpSale.Size = new System.Drawing.Size(842, 476);
             this.flpSale.TabIndex = 40;
+            // 
+            // pnlDescrip
+            // 
+            this.pnlDescrip.Controls.Add(this.txtDescrip);
+            this.pnlDescrip.Controls.Add(this.label6);
+            this.pnlDescrip.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlDescrip.Location = new System.Drawing.Point(3, 3);
+            this.pnlDescrip.Name = "pnlDescrip";
+            this.pnlDescrip.Size = new System.Drawing.Size(836, 32);
+            this.pnlDescrip.TabIndex = 103;
+            this.pnlDescrip.Visible = false;
+            // 
+            // txtDescrip
+            // 
+            this.txtDescrip.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescrip.Location = new System.Drawing.Point(147, 3);
+            this.txtDescrip.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.txtDescrip.MaxLength = 50;
+            this.txtDescrip.Name = "txtDescrip";
+            this.txtDescrip.Size = new System.Drawing.Size(599, 31);
+            this.txtDescrip.TabIndex = 102;
+            this.txtDescrip.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDescrip_KeyDown);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Transparent;
+            this.label6.Location = new System.Drawing.Point(1, 7);
+            this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(121, 24);
+            this.label6.TabIndex = 101;
+            this.label6.Text = "Description:";
             // 
             // dgvData
             // 
@@ -638,12 +689,13 @@
             this.dgvData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Remove,
             this.CP});
-            this.dgvData.Location = new System.Drawing.Point(6, 3);
+            this.dgvData.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dgvData.Location = new System.Drawing.Point(6, 41);
             this.dgvData.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.dgvData.Name = "dgvData";
             this.dgvData.ReadOnly = true;
             this.dgvData.RowHeadersVisible = false;
-            this.dgvData.Size = new System.Drawing.Size(836, 465);
+            this.dgvData.Size = new System.Drawing.Size(833, 476);
             this.dgvData.TabIndex = 42;
             this.dgvData.TabStop = false;
             this.dgvData.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellClick);
@@ -700,7 +752,7 @@
             // 
             this.numAmt.Enabled = false;
             this.numAmt.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numAmt.ForeColor = System.Drawing.Color.White;
+            this.numAmt.ForeColor = System.Drawing.Color.Black;
             this.numAmt.Location = new System.Drawing.Point(6, 142);
             this.numAmt.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.numAmt.Maximum = new decimal(new int[] {
@@ -733,7 +785,7 @@
             this.btnBill.Location = new System.Drawing.Point(128, 435);
             this.btnBill.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.btnBill.Name = "btnBill";
-            this.btnBill.Size = new System.Drawing.Size(121, 39);
+            this.btnBill.Size = new System.Drawing.Size(122, 39);
             this.btnBill.TabIndex = 98;
             this.btnBill.Text = "Last &Bill";
             this.btnBill.UseVisualStyleBackColor = true;
@@ -743,7 +795,7 @@
             // 
             this.numCredit.Enabled = false;
             this.numCredit.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numCredit.ForeColor = System.Drawing.Color.White;
+            this.numCredit.ForeColor = System.Drawing.Color.Black;
             this.numCredit.Location = new System.Drawing.Point(6, 346);
             this.numCredit.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.numCredit.Maximum = new decimal(new int[] {
@@ -776,7 +828,7 @@
             this.btnClose.Location = new System.Drawing.Point(128, 475);
             this.btnClose.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(121, 39);
+            this.btnClose.Size = new System.Drawing.Size(122, 39);
             this.btnClose.TabIndex = 50;
             this.btnClose.Text = "&Close";
             this.btnClose.UseVisualStyleBackColor = true;
@@ -820,7 +872,7 @@
             // 
             this.numBillTotal.Enabled = false;
             this.numBillTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numBillTotal.ForeColor = System.Drawing.Color.White;
+            this.numBillTotal.ForeColor = System.Drawing.Color.Black;
             this.numBillTotal.Location = new System.Drawing.Point(6, 22);
             this.numBillTotal.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.numBillTotal.Maximum = new decimal(new int[] {
@@ -938,12 +990,271 @@
             // 
             // pnlCell
             // 
+            this.pnlCell.Controls.Add(this.pnlCellNo);
             this.pnlCell.Controls.Add(this.label16);
             this.pnlCell.Controls.Add(this.cmbCell);
-            this.pnlCell.Location = new System.Drawing.Point(4, 55);
+            this.pnlCell.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlCell.Location = new System.Drawing.Point(0, 160);
             this.pnlCell.Name = "pnlCell";
-            this.pnlCell.Size = new System.Drawing.Size(236, 63);
+            this.pnlCell.Size = new System.Drawing.Size(238, 63);
             this.pnlCell.TabIndex = 98;
+            // 
+            // pnlCellNo
+            // 
+            this.pnlCellNo.Controls.Add(this.label14);
+            this.pnlCellNo.Controls.Add(this.cmbCellNo);
+            this.pnlCellNo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlCellNo.Location = new System.Drawing.Point(0, 0);
+            this.pnlCellNo.Name = "pnlCellNo";
+            this.pnlCellNo.Size = new System.Drawing.Size(238, 63);
+            this.pnlCellNo.TabIndex = 99;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(11, 0);
+            this.label14.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(81, 25);
+            this.label14.TabIndex = 97;
+            this.label14.Text = "Cell No:";
+            // 
+            // cmbCellNo
+            // 
+            this.cmbCellNo.FormattingEnabled = true;
+            this.cmbCellNo.Location = new System.Drawing.Point(10, 26);
+            this.cmbCellNo.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.cmbCellNo.Name = "cmbCellNo";
+            this.cmbCellNo.Size = new System.Drawing.Size(219, 32);
+            this.cmbCellNo.TabIndex = 7;
+            this.cmbCellNo.SelectedIndexChanged += new System.EventHandler(this.cmbCellNo_SelectedIndexChanged);
+            // 
+            // chkOrder
+            // 
+            this.chkOrder.AutoSize = true;
+            this.chkOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkOrder.ForeColor = System.Drawing.Color.Transparent;
+            this.chkOrder.Location = new System.Drawing.Point(10, 3);
+            this.chkOrder.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.chkOrder.Name = "chkOrder";
+            this.chkOrder.Size = new System.Drawing.Size(104, 28);
+            this.chkOrder.TabIndex = 99;
+            this.chkOrder.TabStop = false;
+            this.chkOrder.Text = "Is &Order";
+            this.chkOrder.UseVisualStyleBackColor = true;
+            this.chkOrder.CheckedChanged += new System.EventHandler(this.chkOrder_CheckedChanged);
+            // 
+            // pnlLeft
+            // 
+            this.pnlLeft.Controls.Add(this.pnl1);
+            this.pnlLeft.Controls.Add(this.pnlCell);
+            this.pnlLeft.Controls.Add(this.pnlTimeline);
+            this.pnlLeft.Controls.Add(this.pnlOrder);
+            this.pnlLeft.Controls.Add(this.panel1);
+            this.pnlLeft.Location = new System.Drawing.Point(4, 115);
+            this.pnlLeft.Name = "pnlLeft";
+            this.pnlLeft.Size = new System.Drawing.Size(238, 555);
+            this.pnlLeft.TabIndex = 43;
+            // 
+            // pnl1
+            // 
+            this.pnl1.Controls.Add(this.btnBnk);
+            this.pnl1.Controls.Add(this.btnCus);
+            this.pnl1.Controls.Add(this.label26);
+            this.pnl1.Controls.Add(this.label25);
+            this.pnl1.Controls.Add(this.label23);
+            this.pnl1.Controls.Add(this.numBal);
+            this.pnl1.Controls.Add(this.dtpSaleDate);
+            this.pnl1.Controls.Add(this.cmbCus);
+            this.pnl1.Controls.Add(this.cmbBnk);
+            this.pnl1.Controls.Add(this.label18);
+            this.pnl1.Controls.Add(this.label20);
+            this.pnl1.Controls.Add(this.txtReference);
+            this.pnl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnl1.Location = new System.Drawing.Point(0, 223);
+            this.pnl1.Name = "pnl1";
+            this.pnl1.Size = new System.Drawing.Size(238, 332);
+            this.pnl1.TabIndex = 101;
+            // 
+            // btnBnk
+            // 
+            this.btnBnk.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.btnBnk.Location = new System.Drawing.Point(157, 140);
+            this.btnBnk.Name = "btnBnk";
+            this.btnBnk.Size = new System.Drawing.Size(72, 28);
+            this.btnBnk.TabIndex = 109;
+            this.btnBnk.Text = "Add New";
+            this.btnBnk.UseVisualStyleBackColor = true;
+            this.btnBnk.Click += new System.EventHandler(this.btnBnk_Click);
+            // 
+            // btnCus
+            // 
+            this.btnCus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.btnCus.Location = new System.Drawing.Point(157, 5);
+            this.btnCus.Name = "btnCus";
+            this.btnCus.Size = new System.Drawing.Size(72, 28);
+            this.btnCus.TabIndex = 108;
+            this.btnCus.Text = "Add New";
+            this.btnCus.UseVisualStyleBackColor = true;
+            this.btnCus.Click += new System.EventHandler(this.btnCus_Click);
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.ForeColor = System.Drawing.Color.Transparent;
+            this.label26.Location = new System.Drawing.Point(11, 75);
+            this.label26.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(91, 24);
+            this.label26.TabIndex = 107;
+            this.label26.Text = "Balance:";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.Color.Transparent;
+            this.label25.Location = new System.Drawing.Point(11, 205);
+            this.label25.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(58, 24);
+            this.label25.TabIndex = 106;
+            this.label25.Text = "Date:";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.Color.Transparent;
+            this.label23.Location = new System.Drawing.Point(11, 142);
+            this.label23.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(62, 24);
+            this.label23.TabIndex = 105;
+            this.label23.Text = "Bank:";
+            // 
+            // numBal
+            // 
+            this.numBal.Location = new System.Drawing.Point(11, 102);
+            this.numBal.Maximum = new decimal(new int[] {
+            999999,
+            0,
+            0,
+            0});
+            this.numBal.Minimum = new decimal(new int[] {
+            999999,
+            0,
+            0,
+            -2147483648});
+            this.numBal.Name = "numBal";
+            this.numBal.Size = new System.Drawing.Size(219, 29);
+            this.numBal.TabIndex = 103;
+            // 
+            // dtpSaleDate
+            // 
+            this.dtpSaleDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpSaleDate.Location = new System.Drawing.Point(10, 231);
+            this.dtpSaleDate.Name = "dtpSaleDate";
+            this.dtpSaleDate.Size = new System.Drawing.Size(219, 29);
+            this.dtpSaleDate.TabIndex = 102;
+            // 
+            // cmbCus
+            // 
+            this.cmbCus.FormattingEnabled = true;
+            this.cmbCus.Location = new System.Drawing.Point(10, 35);
+            this.cmbCus.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.cmbCus.Name = "cmbCus";
+            this.cmbCus.Size = new System.Drawing.Size(219, 32);
+            this.cmbCus.TabIndex = 72;
+            this.cmbCus.SelectedValueChanged += new System.EventHandler(this.cmbCus_SelectedValueChanged);
+            this.cmbCus.TextChanged += new System.EventHandler(this.cmbCus_TextChanged);
+            this.cmbCus.Leave += new System.EventHandler(this.cmbCus_Leave);
+            // 
+            // cmbBnk
+            // 
+            this.cmbBnk.FormattingEnabled = true;
+            this.cmbBnk.Location = new System.Drawing.Point(10, 169);
+            this.cmbBnk.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.cmbBnk.Name = "cmbBnk";
+            this.cmbBnk.Size = new System.Drawing.Size(219, 32);
+            this.cmbBnk.TabIndex = 70;
+            this.cmbBnk.Leave += new System.EventHandler(this.cmbBnk_Leave);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.Transparent;
+            this.label18.Location = new System.Drawing.Point(11, 8);
+            this.label18.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(105, 24);
+            this.label18.TabIndex = 69;
+            this.label18.Text = "Customer:";
+            // 
+            // pnlTimeline
+            // 
+            this.pnlTimeline.Controls.Add(this.label15);
+            this.pnlTimeline.Controls.Add(this.dtpTimelineTime);
+            this.pnlTimeline.Controls.Add(this.dtpTimelineDate);
+            this.pnlTimeline.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTimeline.Location = new System.Drawing.Point(0, 97);
+            this.pnlTimeline.Name = "pnlTimeline";
+            this.pnlTimeline.Size = new System.Drawing.Size(238, 63);
+            this.pnlTimeline.TabIndex = 99;
+            this.pnlTimeline.Visible = false;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(11, 0);
+            this.label15.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(92, 25);
+            this.label15.TabIndex = 103;
+            this.label15.Text = "Timeline:";
+            // 
+            // dtpTimelineDate
+            // 
+            this.dtpTimelineDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpTimelineDate.Location = new System.Drawing.Point(10, 28);
+            this.dtpTimelineDate.Name = "dtpTimelineDate";
+            this.dtpTimelineDate.Size = new System.Drawing.Size(126, 29);
+            this.dtpTimelineDate.TabIndex = 101;
+            // 
+            // pnlOrder
+            // 
+            this.pnlOrder.Controls.Add(this.chkOrder);
+            this.pnlOrder.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlOrder.Location = new System.Drawing.Point(0, 63);
+            this.pnlOrder.Name = "pnlOrder";
+            this.pnlOrder.Size = new System.Drawing.Size(238, 34);
+            this.pnlOrder.TabIndex = 94;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.rbWhole);
+            this.panel1.Controls.Add(this.rbRetail);
+            this.panel1.Controls.Add(this.chkBill);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(238, 63);
+            this.panel1.TabIndex = 102;
+            // 
+            // dtpTimelineTime
+            // 
+            this.dtpTimelineTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtpTimelineTime.Location = new System.Drawing.Point(142, 28);
+            this.dtpTimelineTime.Name = "dtpTimelineTime";
+            this.dtpTimelineTime.ShowUpDown = true;
+            this.dtpTimelineTime.Size = new System.Drawing.Size(86, 29);
+            this.dtpTimelineTime.TabIndex = 102;
             // 
             // frmSale
             // 
@@ -951,33 +1262,22 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
             this.ClientSize = new System.Drawing.Size(1361, 691);
-            this.Controls.Add(this.pnlCell);
+            this.Controls.Add(this.pnlLeft);
             this.Controls.Add(this.pnlTots);
             this.Controls.Add(this.flpSale);
             this.Controls.Add(this.flpOption);
-            this.Controls.Add(this.chkBill);
-            this.Controls.Add(this.rbWhole);
-            this.Controls.Add(this.rbRetail);
-            this.Controls.Add(this.txtReference);
-            this.Controls.Add(this.label20);
-            this.Controls.Add(this.label19);
             this.Location = new System.Drawing.Point(0, 0);
             this.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.MaximumSize = new System.Drawing.Size(2002, 1306);
             this.MinimumSize = new System.Drawing.Size(1022, 698);
             this.Name = "frmSale";
-            this.Text = " Sale Corner";
+            this.Text = "Sale Corner";
             this.WindowState = System.Windows.Forms.FormWindowState.Normal;
             this.Load += new System.EventHandler(this.frmSale_Load);
-            this.Controls.SetChildIndex(this.label19, 0);
-            this.Controls.SetChildIndex(this.label20, 0);
-            this.Controls.SetChildIndex(this.txtReference, 0);
-            this.Controls.SetChildIndex(this.rbRetail, 0);
-            this.Controls.SetChildIndex(this.rbWhole, 0);
-            this.Controls.SetChildIndex(this.chkBill, 0);
             this.Controls.SetChildIndex(this.flpOption, 0);
             this.Controls.SetChildIndex(this.flpSale, 0);
             this.Controls.SetChildIndex(this.pnlTots, 0);
+            this.Controls.SetChildIndex(this.pnlLeft, 0);
             this.Controls.SetChildIndex(this.btnProduct, 0);
             this.Controls.SetChildIndex(this.btnClient, 0);
             this.Controls.SetChildIndex(this.btnBank, 0);
@@ -1001,7 +1301,6 @@
             this.Controls.SetChildIndex(this.label10, 0);
             this.Controls.SetChildIndex(this.numClientBal, 0);
             this.Controls.SetChildIndex(this.label11, 0);
-            this.Controls.SetChildIndex(this.pnlCell, 0);
             ((System.ComponentModel.ISupportInitialize)(this.numInvoiceno)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numClientBal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numChange)).EndInit();
@@ -1011,6 +1310,8 @@
             this.pnlVeh.ResumeLayout(false);
             this.pnlVeh.PerformLayout();
             this.flpSale.ResumeLayout(false);
+            this.pnlDescrip.ResumeLayout(false);
+            this.pnlDescrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).EndInit();
             this.pnlTots.ResumeLayout(false);
             this.pnlTots.PerformLayout();
@@ -1021,6 +1322,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.numPaid)).EndInit();
             this.pnlCell.ResumeLayout(false);
             this.pnlCell.PerformLayout();
+            this.pnlCellNo.ResumeLayout(false);
+            this.pnlCellNo.PerformLayout();
+            this.pnlLeft.ResumeLayout(false);
+            this.pnl1.ResumeLayout(false);
+            this.pnl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numBal)).EndInit();
+            this.pnlTimeline.ResumeLayout(false);
+            this.pnlTimeline.PerformLayout();
+            this.pnlOrder.ResumeLayout(false);
+            this.pnlOrder.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1028,7 +1341,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
         public System.Windows.Forms.TextBox txtReference;
         public System.Windows.Forms.RadioButton rbRetail;
@@ -1079,6 +1391,31 @@
         private System.Windows.Forms.ComboBox cmbCell;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Panel pnlCell;
+        public System.Windows.Forms.CheckBox chkOrder;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ComboBox cmbCellNo;
+        private System.Windows.Forms.Panel pnlLeft;
+        private System.Windows.Forms.Panel pnlTimeline;
+        private System.Windows.Forms.DateTimePicker dtpTimelineDate;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label6;
+        public System.Windows.Forms.TextBox txtDescrip;
+        private System.Windows.Forms.Panel pnlDescrip;
+        private System.Windows.Forms.Panel pnl1;
+        private System.Windows.Forms.Button btnBnk;
+        private System.Windows.Forms.Button btnCus;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.NumericUpDown numBal;
+        private System.Windows.Forms.DateTimePicker dtpSaleDate;
+        private System.Windows.Forms.ComboBox cmbCus;
+        private System.Windows.Forms.ComboBox cmbBnk;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlCellNo;
+        private System.Windows.Forms.Panel pnlOrder;
+        private System.Windows.Forms.DateTimePicker dtpTimelineTime;
 
     }
 }

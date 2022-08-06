@@ -249,6 +249,7 @@ namespace prjGrow.Manufacture
             frmProd.ShowDialog();
             loadProd();
         }
+
         private void btnClear_Click(object sender, EventArgs e)
         {
             loading = true;

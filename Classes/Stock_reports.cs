@@ -12,6 +12,8 @@ namespace prjGrow.Classes
         public short cate { get; set; }
         public long min_stk = 0;
         public long sup_id { get; set; }
+        public int cus_id { get; set; }
+        public int prod_id { get; set; }
         public string prod_name = "";
 
         public void saleReport(int year, short month, DateTime date)
@@ -19,6 +21,14 @@ namespace prjGrow.Classes
             setBounds(year, month, date);
 
             db.query = "exec repSale @sdate = '"+sdate+"', @edate = '"+edate+"'";
+            db.runQuery();
+        }
+
+        public void saleDetailReport(int cus_id, int prod_id, int year, short month, DateTime date)
+        {
+            setBounds(year, month, date);
+            
+            db.query = "exec repSaleDetail @sdate = '" + sdate + "', @edate = '" + edate + "', @prod_id = " + prod_id + ", @cus_id = " + cus_id + "";
             db.runQuery();
         }
 

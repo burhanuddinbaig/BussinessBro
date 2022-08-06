@@ -241,7 +241,7 @@ namespace prjGrow.StockInfo
                 pur.cheq.amt = Convert.ToInt64(numPaid.Value);
                 pur.cheq.issue_date = dtpCheqDate.Value;
             }
-            
+
             if (Custom.client_id_active == 1 || Custom.client_id_active == 5 || Custom.client_id_active == 7)
                 pur.stock.term_id = Constants.term_store;
             else if (Custom.client_id_active == 2)
@@ -514,7 +514,7 @@ namespace prjGrow.StockInfo
             divideFrieght();
             loading = false;
         }
-        
+
         private void numDiscount_ValueChanged(object sender, EventArgs e)
         {
 

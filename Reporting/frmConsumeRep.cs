@@ -47,7 +47,7 @@ namespace prjGrow.Reporting
 
         private void frmConsumeRep_Load(object sender, EventArgs e)
         {
-            com.loadFormInfo(this, "Consumtion Report", lblTitle);
+            com.loadFormInfo(this, "Consumption Report", lblTitle);
         }
     }
 }

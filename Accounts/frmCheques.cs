@@ -34,10 +34,5 @@ namespace prjGrow.Accounts
             com.loadFormInfo(this, "Cheques History", lblClient, lblTitle);
             loadPayCheques();
         }
-
-        private void rbPending_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

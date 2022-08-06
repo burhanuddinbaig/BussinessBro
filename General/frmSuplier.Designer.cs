@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSuplier));
             this.dgvData = new System.Windows.Forms.DataGridView();
+            this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -38,15 +40,9 @@
             this.txtCellno = new System.Windows.Forms.TextBox();
             this.txtContact = new System.Windows.Forms.TextBox();
             this.txtAdrs = new System.Windows.Forms.TextBox();
-            this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
             this.gbSrh.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.Text = "E Light Software Solutions, Pakistan LTD";
             // 
             // lblMsg
             // 
@@ -87,6 +83,22 @@
             this.dgvData.TabIndex = 25;
             this.dgvData.TabStop = false;
             this.dgvData.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellClick);
+            // 
+            // Edit
+            // 
+            this.Edit.HeaderText = "Edit";
+            this.Edit.Image = ((System.Drawing.Image)(resources.GetObject("Edit.Image")));
+            this.Edit.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.Edit.Name = "Edit";
+            this.Edit.ReadOnly = true;
+            // 
+            // Delete
+            // 
+            this.Delete.HeaderText = "Delete";
+            this.Delete.Image = ((System.Drawing.Image)(resources.GetObject("Delete.Image")));
+            this.Delete.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.Delete.Name = "Delete";
+            this.Delete.ReadOnly = true;
             // 
             // label2
             // 
@@ -163,22 +175,6 @@
             this.txtAdrs.Name = "txtAdrs";
             this.txtAdrs.Size = new System.Drawing.Size(400, 26);
             this.txtAdrs.TabIndex = 4;
-            // 
-            // Edit
-            // 
-            this.Edit.HeaderText = "Edit";
-            this.Edit.Image = ((System.Drawing.Image)(resources.GetObject("Edit.Image")));
-            this.Edit.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.Edit.Name = "Edit";
-            this.Edit.ReadOnly = true;
-            // 
-            // Delete
-            // 
-            this.Delete.HeaderText = "Delete";
-            this.Delete.Image = ((System.Drawing.Image)(resources.GetObject("Delete.Image")));
-            this.Delete.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.Delete.Name = "Delete";
-            this.Delete.ReadOnly = true;
             // 
             // frmSuplier
             // 

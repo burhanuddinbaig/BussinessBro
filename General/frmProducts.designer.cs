@@ -90,10 +90,6 @@
             this.pnlExp.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lblTitle
-            // 
-            this.lblTitle.Text = "E Light Software Solutions, Pakistan LTD";
-            // 
             // lblMsg
             // 
             this.lblMsg.Location = new System.Drawing.Point(228, 93);
@@ -139,7 +135,6 @@
             this.dgvData.TabIndex = 25;
             this.dgvData.TabStop = false;
             this.dgvData.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellClick);
-            this.dgvData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellContentClick);
             // 
             // Edit
             // 

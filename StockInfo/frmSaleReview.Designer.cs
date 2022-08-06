@@ -67,6 +67,8 @@
             this.btnAddIMEI = new System.Windows.Forms.Button();
             this.dgvData = new System.Windows.Forms.DataGridView();
             this.Return = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Sub = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Add = new System.Windows.Forms.DataGridViewImageColumn();
             this.Review = new System.Windows.Forms.DataGridViewImageColumn();
             this.numZero = new System.Windows.Forms.NumericUpDown();
             this.btnPrint = new System.Windows.Forms.Button();
@@ -269,7 +271,7 @@
             this.pnlCell.Location = new System.Drawing.Point(403, 65);
             this.pnlCell.Name = "pnlCell";
             this.pnlCell.Size = new System.Drawing.Size(319, 35);
-            this.pnlCell.TabIndex = 7;
+            this.pnlCell.TabIndex = 8;
             // 
             // cmbCell
             // 
@@ -298,7 +300,7 @@
             this.cmbCusSrh.Margin = new System.Windows.Forms.Padding(4);
             this.cmbCusSrh.Name = "cmbCusSrh";
             this.cmbCusSrh.Size = new System.Drawing.Size(200, 32);
-            this.cmbCusSrh.TabIndex = 96;
+            this.cmbCusSrh.TabIndex = 7;
             this.cmbCusSrh.SelectedValueChanged += new System.EventHandler(this.cmbCusSrh_SelectedValueChanged);
             // 
             // label4
@@ -326,7 +328,7 @@
             0});
             this.numYear.Name = "numYear";
             this.numYear.Size = new System.Drawing.Size(66, 29);
-            this.numYear.TabIndex = 94;
+            this.numYear.TabIndex = 6;
             this.numYear.Value = new decimal(new int[] {
             2019,
             0,
@@ -460,7 +462,7 @@
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(211, 40);
-            this.btnDelete.TabIndex = 22;
+            this.btnDelete.TabIndex = 9;
             this.btnDelete.Text = "&Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -487,7 +489,7 @@
             0});
             this.numStock.Name = "numStock";
             this.numStock.Size = new System.Drawing.Size(125, 29);
-            this.numStock.TabIndex = 75;
+            this.numStock.TabIndex = 3;
             // 
             // numQty
             // 
@@ -500,7 +502,7 @@
             0});
             this.numQty.Name = "numQty";
             this.numQty.Size = new System.Drawing.Size(125, 29);
-            this.numQty.TabIndex = 2;
+            this.numQty.TabIndex = 4;
             this.numQty.ValueChanged += new System.EventHandler(this.numQty_ValueChanged);
             // 
             // btnAddtoBill
@@ -510,7 +512,7 @@
             this.btnAddtoBill.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddtoBill.Name = "btnAddtoBill";
             this.btnAddtoBill.Size = new System.Drawing.Size(246, 36);
-            this.btnAddtoBill.TabIndex = 3;
+            this.btnAddtoBill.TabIndex = 8;
             this.btnAddtoBill.Text = "&Add to Bill";
             this.btnAddtoBill.UseVisualStyleBackColor = true;
             this.btnAddtoBill.Click += new System.EventHandler(this.btnAddtoBill_Click);
@@ -526,7 +528,7 @@
             0});
             this.numPrice.Name = "numPrice";
             this.numPrice.Size = new System.Drawing.Size(125, 29);
-            this.numPrice.TabIndex = 4;
+            this.numPrice.TabIndex = 2;
             this.numPrice.ThousandsSeparator = true;
             this.numPrice.ValueChanged += new System.EventHandler(this.numPrice_ValueChanged);
             // 
@@ -630,7 +632,7 @@
             this.flpItem.Location = new System.Drawing.Point(489, 58);
             this.flpItem.Name = "flpItem";
             this.flpItem.Size = new System.Drawing.Size(495, 40);
-            this.flpItem.TabIndex = 93;
+            this.flpItem.TabIndex = 5;
             // 
             // pnlDist
             // 
@@ -639,7 +641,7 @@
             this.pnlDist.Location = new System.Drawing.Point(3, 3);
             this.pnlDist.Name = "pnlDist";
             this.pnlDist.Size = new System.Drawing.Size(220, 36);
-            this.pnlDist.TabIndex = 95;
+            this.pnlDist.TabIndex = 6;
             // 
             // numDist
             // 
@@ -673,7 +675,7 @@
             this.pnlAmount.Location = new System.Drawing.Point(229, 3);
             this.pnlAmount.Name = "pnlAmount";
             this.pnlAmount.Size = new System.Drawing.Size(260, 36);
-            this.pnlAmount.TabIndex = 94;
+            this.pnlAmount.TabIndex = 7;
             // 
             // btnAddIMEI
             // 
@@ -683,7 +685,7 @@
             this.btnAddIMEI.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddIMEI.Name = "btnAddIMEI";
             this.btnAddIMEI.Size = new System.Drawing.Size(144, 36);
-            this.btnAddIMEI.TabIndex = 92;
+            this.btnAddIMEI.TabIndex = 9;
             this.btnAddIMEI.Text = "Add IMEIs";
             this.btnAddIMEI.UseVisualStyleBackColor = true;
             this.btnAddIMEI.Visible = false;
@@ -699,6 +701,8 @@
             this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Return,
+            this.Sub,
+            this.Add,
             this.Review});
             this.dgvData.Location = new System.Drawing.Point(6, 149);
             this.dgvData.Margin = new System.Windows.Forms.Padding(4);
@@ -712,6 +716,7 @@
             // 
             // Return
             // 
+            this.Return.FillWeight = 45F;
             this.Return.HeaderText = "Return";
             this.Return.Image = ((System.Drawing.Image)(resources.GetObject("Return.Image")));
             this.Return.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
@@ -720,8 +725,25 @@
             this.Return.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Return.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
+            // Sub
+            // 
+            this.Sub.FillWeight = 30F;
+            this.Sub.HeaderText = "Sub";
+            this.Sub.Name = "Sub";
+            this.Sub.ReadOnly = true;
+            this.Sub.Visible = false;
+            // 
+            // Add
+            // 
+            this.Add.FillWeight = 30F;
+            this.Add.HeaderText = "Add";
+            this.Add.Name = "Add";
+            this.Add.ReadOnly = true;
+            this.Add.Visible = false;
+            // 
             // Review
             // 
+            this.Review.FillWeight = 45F;
             this.Review.HeaderText = "Review";
             this.Review.Image = ((System.Drawing.Image)(resources.GetObject("Review.Image")));
             this.Review.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
@@ -746,7 +768,7 @@
             this.btnPrint.Margin = new System.Windows.Forms.Padding(4);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(211, 40);
-            this.btnPrint.TabIndex = 89;
+            this.btnPrint.TabIndex = 8;
             this.btnPrint.Text = "&Print Bill";
             this.btnPrint.UseVisualStyleBackColor = true;
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
@@ -789,7 +811,7 @@
             0});
             this.numRefund.Name = "numRefund";
             this.numRefund.Size = new System.Drawing.Size(211, 35);
-            this.numRefund.TabIndex = 112;
+            this.numRefund.TabIndex = 1;
             this.numRefund.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numRefund.ThousandsSeparator = true;
             // 
@@ -821,7 +843,7 @@
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(211, 40);
-            this.button1.TabIndex = 110;
+            this.button1.TabIndex = 10;
             this.button1.Text = "&Close";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -833,7 +855,7 @@
             this.btnReview.Margin = new System.Windows.Forms.Padding(4);
             this.btnReview.Name = "btnReview";
             this.btnReview.Size = new System.Drawing.Size(211, 40);
-            this.btnReview.TabIndex = 109;
+            this.btnReview.TabIndex = 7;
             this.btnReview.Text = "To&day Bills";
             this.btnReview.UseVisualStyleBackColor = true;
             this.btnReview.Click += new System.EventHandler(this.button3_Click);
@@ -845,7 +867,7 @@
             this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(211, 40);
-            this.btnSave.TabIndex = 108;
+            this.btnSave.TabIndex = 6;
             this.btnSave.Text = "&Save";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -863,7 +885,7 @@
             0});
             this.numCredit.Name = "numCredit";
             this.numCredit.Size = new System.Drawing.Size(211, 35);
-            this.numCredit.TabIndex = 101;
+            this.numCredit.TabIndex = 5;
             this.numCredit.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numCredit.ThousandsSeparator = true;
             // 
@@ -892,7 +914,7 @@
             0});
             this.numBillTotal.Name = "numBillTotal";
             this.numBillTotal.Size = new System.Drawing.Size(211, 35);
-            this.numBillTotal.TabIndex = 98;
+            this.numBillTotal.TabIndex = 2;
             this.numBillTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numBillTotal.ThousandsSeparator = true;
             // 
@@ -920,7 +942,7 @@
             0});
             this.numDiscount.Name = "numDiscount";
             this.numDiscount.Size = new System.Drawing.Size(211, 35);
-            this.numDiscount.TabIndex = 99;
+            this.numDiscount.TabIndex = 3;
             this.numDiscount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numDiscount.ThousandsSeparator = true;
             this.numDiscount.ValueChanged += new System.EventHandler(this.numDiscount_ValueChanged);
@@ -949,7 +971,7 @@
             0});
             this.numPaid.Name = "numPaid";
             this.numPaid.Size = new System.Drawing.Size(211, 35);
-            this.numPaid.TabIndex = 100;
+            this.numPaid.TabIndex = 4;
             this.numPaid.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numPaid.ThousandsSeparator = true;
             // 
@@ -1100,8 +1122,6 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox txtCus;
         private System.Windows.Forms.Button btnAddIMEI;
-        private System.Windows.Forms.DataGridViewImageColumn Return;
-        private System.Windows.Forms.DataGridViewImageColumn Review;
         private System.Windows.Forms.Panel pnlTots;
         private System.Windows.Forms.Panel pnlGrid;
         protected System.Windows.Forms.Label label12;
@@ -1132,5 +1152,9 @@
         private System.Windows.Forms.NumericUpDown numDist;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Panel pnlAmount;
+        private System.Windows.Forms.DataGridViewImageColumn Return;
+        private System.Windows.Forms.DataGridViewImageColumn Sub;
+        private System.Windows.Forms.DataGridViewImageColumn Add;
+        private System.Windows.Forms.DataGridViewImageColumn Review;
     }
 }

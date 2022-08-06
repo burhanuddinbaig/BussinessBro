@@ -26,12 +26,12 @@ namespace prjGrow.StockInfo
         Bank bnk = new Bank();
         Customer cus = new Customer();
         Vehicle veh = new Vehicle();
+        Orders odr = new Orders();
 
         DataTable tblCus = null;
         DataTable tblLabour = new DataTable();
         DataTable tblVeh = new DataTable();
         DataTable tblBill = new DataTable();
-        Orders odr = new Orders();
         frmOrders frmOdr = new frmOrders();
         clsDb db = new clsDb();
         Employee emp = new Employee();
@@ -46,6 +46,7 @@ namespace prjGrow.StockInfo
         bool is_bakery = false;     //to less stock bakers if purchased entry not pushed yet
 
         bool removed = false;
+        bool isOrder = false;
 
         #region functions
         public void createCart()
@@ -86,7 +87,7 @@ namespace prjGrow.StockInfo
             numDiscount.BackColor = Color.White;
             numBillTotal.BackColor = Color.White;
             numAmt.BackColor = Color.White;
-            numClientBal.BackColor = Color.White;
+            numBal.BackColor = Color.White;
             numCredit.BackColor = Color.White;
             numChange.BackColor = Color.White;
         }
@@ -132,9 +133,15 @@ namespace prjGrow.StockInfo
                 prod.cateServ = prod.allCate = true;
             else if (Custom.client_id_active == 7)
                 prod.cateGadget = prod.allCate = true;
-            else if (Custom.client_id_active == 2)
+            else if (Custom.client_id_active == Constants.CLT_ALKARIM)
             {
-                prod.cateBakery = prod.cateStk = prod.cateServ = prod.allCate = true;
+                if (!isOrder)
+                    prod.cateBakery = prod.cateStk = prod.cateServ = prod.allCate = prod.multiCate = true;
+                else
+                {
+                    prod.allCate = prod.multiCate = false;                 //To Load Just Bakery Items For Orders
+                    prod.category = Constants.cate_cake;
+                }
             }
             else if (Custom.mod_mobile)
                 prod.cateStk = prod.cateMobile = prod.multiCate = true;
@@ -182,21 +189,21 @@ namespace prjGrow.StockInfo
 
         void loadBanks()
         {
-            com.loadCombo(cmbBank, bnk.getBanks(), Bank.col_bank, Bank.col_id);
+            com.loadCombo(cmbBnk, bnk.getBanks(), Bank.col_bank, Bank.col_id);
         }
 
         void loadCustomers()
         {
             tblCus = cus.getCustomers();
-            com.loadCombo(cmbClient, tblCus, Customer.col_name, Customer.col_id);
-            com.loadCombo(cmbCell, tblCus, Customer.col_contact, Customer.col_id); 
+            com.loadCombo(cmbCus, tblCus, Customer.col_name, Customer.col_id);
+            com.loadCombo(cmbCellNo, tblCus, Customer.col_contact, Customer.col_id); 
         }
 
         void loadBillno()
         {
             numInvoiceno.Value = db.getNextId("Sale");
         }
-        
+
         void showCart()
         {
             dgvData.DataSource = sale.tblCart;
@@ -224,7 +231,7 @@ namespace prjGrow.StockInfo
             numCredit.Value = 0;
             numChange.Value = 0;
         }
-        
+
         void clearLabour()
         {
             frmLab = new frmLabour();
@@ -248,7 +255,7 @@ namespace prjGrow.StockInfo
             if(sale.tblCart != null)sale.tblCart.Clear();
             if (sale.tblOrders != null) sale.tblOrders.Clear();
             if (sale.tblIMEI != null) sale.tblIMEI.Clear();
-            com.clearControls(new Control[]{cmbBank, cmbClient, txtAccno, txtProdCode, txtProdName, txtReference});
+            com.clearControls(new Control[]{cmbBnk, cmbCus, txtAccno, txtProdCode, txtProdName, txtReference});
             clearValues();
             loadProducts();
             showCart();
@@ -270,20 +277,20 @@ namespace prjGrow.StockInfo
             sale.reference = txtReference.Text;
             sale.paid_cash = Convert.ToInt64(numPaid.Value);
 
-            if (com.chkCombo(cmbClient))
-                sale.cus_id = Convert.ToInt64(cmbClient.SelectedValue);
+            if (com.chkCombo(cmbCus))
+                sale.cus_id = Convert.ToInt64(cmbCus.SelectedValue);
             else
                 sale.cus_id = 0;
 
-            if (com.chkCombo(cmbBank))
-                sale.bank_id = Convert.ToInt64(cmbBank.SelectedValue);
+            if (com.chkCombo(cmbBnk))
+                sale.bank_id = Convert.ToInt64(cmbBnk.SelectedValue);
             else
                 sale.bank_id = 0;
 
-                if (sale.tblOrders.Rows.Count > 0)
+            if (sale.tblOrders.Rows.Count > 0)
             {
                 sale.discount += Convert.ToInt32(sale.tblOrders.Compute("Sum(" + Sale.col_discount + ")", "").ToString());
-                
+                    
                 if (sale.tblCart != null && sale.tblCart.Rows.Count > 0)
                     sale.total = Convert.ToInt64(sale.tblCart.Compute("Sum(" + Product.col_amount + ")", ""));
                 else
@@ -316,8 +323,23 @@ namespace prjGrow.StockInfo
                     sale.stock.term_id = Convert.ToInt64(tblVeh.Rows[cmbVeh.SelectedIndex][Distribute.col_trem_id]);
                 }
             }
+            sale.narration = "Sale: " + cmbCus.Text + " " + txtReference.Text;
+        }
 
-            sale.narration = "Sale: " + cmbClient.Text + " " + txtReference.Text;
+        void getOrderData()
+        {
+            odr.cus_id = Convert.ToInt64(cmbCus.SelectedValue.ToString());
+//            odr.cus_id = odr.cus_id > 0 ? odr.cus_id : 0;
+            odr.date = dtpDate.Value;
+            odr.target = dtpTimelineDate.Value;
+            odr.targetTime = dtpTimelineTime.Value;
+            
+            odr.total = sale.total;
+            odr.discount = sale.discount;
+            odr.amount = odr.total - odr.discount;
+            odr.adv = odr.paid > odr.amount ? odr.amount : sale.paid;
+            odr.remain = odr.total - odr.adv - odr.discount;
+            odr.cus.cus_id = odr.cus_id;
         }
 
         bool calValues()
@@ -405,14 +427,14 @@ namespace prjGrow.StockInfo
                 sale.discount = Convert.ToInt32(numDiscount.Value) < Convert.ToInt64(numBillTotal.Value) ? Convert.ToInt32(numDiscount.Value) : 0;
 
             sale.amount = sale.total - sale.discount;
-            numAmt.Value = sale.amount;
+            numAmt.Value = sale.amount >= 0 ? sale.amount: 0;
             sale.paid = sale.amount - Convert.ToInt32(numPaid.Value) <= 0 ? sale.amount : Convert.ToInt32(numPaid.Value);
-            
+
             loading = true; 
             numBillTotal.Value = sale.total;
             loading = false;
 
-            if (cmbClient.SelectedIndex >= 0)
+            if (cmbCus.SelectedIndex >= 0)
             {
                 numCredit.Value = (sale.amount - sale.paid) > 0 ? (sale.amount - sale.paid) : 0;
             }
@@ -437,7 +459,7 @@ namespace prjGrow.StockInfo
 
             return true;
         }
-        
+
         void addToCart(DataGridViewRow rowProd)
         {
             if (sale.tblCart.Rows.Count <= 0)
@@ -524,7 +546,7 @@ namespace prjGrow.StockInfo
             {
                 btnSp1.Text = "Bag sm.";
                 btnSp2.Text = "Bag lg.";
-                btnSp1.Visible = btnSp2.Visible = true;////the quick brown fox jumps over lazy dog the quick brown fox jumps
+                btnSp1.Visible = btnSp2.Visible = true;     ////the quick brown fox jumps over lazy dog the quick brown fox jumps
             }
             btnOrder.Visible = Custom.client_id_active == 2 || (Custom.mod_manufact && !(Custom.client_id_active == 7));
             rbWhole.Checked = Custom.client_id_active == 7;
@@ -633,10 +655,90 @@ namespace prjGrow.StockInfo
             calValues();
         }
 
+        void flipOrder()            //to activate/deactivate orders
+        {
+            loading = true;
+            isOrder = chkOrder.Checked;
+            clearAll();
+            chkBill.Checked = isOrder;
+            lblPaid.Text = isOrder ? "Advance on Order:" : "Paid as Cash:";
+            pnlTimeline.Visible = pnlDescrip.Visible = isOrder;
+            loading = false;
+        }
+
         void loadOrderCount()
         {
-            int tmp = odr.getCurOrders();
+            short tmp = (short)odr.getCurOrders();
             btnOrder.Text = "Orders(" + tmp + ")";
+        }
+
+        bool saveCus()
+        {
+            if (cmbCus.SelectedIndex < 0 && cmbCus.Text.Length > 0)
+            {
+                cus.contact = (cmbCell.SelectedIndex < 0) ? cmbCell.Text : "";  //Assigns cell no to cell.contact if new cell no typed else empty
+                cus.name = cmbCus.Text;
+                cus.saveCustomer();
+                if (cus.result)
+                    sale.cus_id = odr.cus_id = db.getLastId("Customer");
+                if (!cus.result)
+                    com.showMessage(cus.msg, lblMsg, cus.msg_type, tmrMsg);
+                return cus.result;
+            }
+            return true;
+        }
+
+        void saveSale()
+        {
+            calValues();
+            getData();
+            if (!saveCus())
+                return;
+            if (sale.saveSale())
+            {
+                stopTmr();
+                if (chkBill.Checked)
+                    sale.printBill();
+                loading = true;
+                clearAll();
+                loading = false;
+            }
+            com.showMessage(sale.msg, lblMsg, sale.msg_type, tmrMsg);
+        }
+
+        void saveOrder()
+        {
+            calValues();
+            getOrderData();
+            saveCus();
+            odr.saveOrder();
+            if (odr.result)
+            {
+                stopTmr();
+                if (chkBill.Checked)
+                    odr.printReciept();
+                loading = true;
+                clearAll();
+                loading = false;
+            }
+            com.showMessage(odr.msg, lblMsg, odr.msg_type, tmrMsg);
+        }
+
+        public void cusDisplay()
+        {
+            if (Custom.client_id_active != 2)
+                return;
+            if (!portCusDisplay.IsOpen)
+                return;
+            portCusDisplay.Open();
+            portCusDisplay.WriteLine((char)13 + "    Bill Total    ");
+            portCusDisplay.WriteLine((char)13 + "    PKR." + (numBillTotal.Value - numDiscount.Value) + ".00        ");
+            portCusDisplay.Close();
+        }
+
+        public void clearDisplay()
+        {
+
         }
 
         #endregion
@@ -700,10 +802,6 @@ namespace prjGrow.StockInfo
 
                     dgvData.ReadOnly = false;
                     com.lockColumns(dgvData, true, Product.col_code, Product.col_prod_name, Product.col_amount);
-                    /*dgvData.Columns[Product.col_code].ReadOnly = true;
-                    dgvData.Columns[Product.col_prod_name].ReadOnly = true;
-                    dgvData.Columns[Product.col_amount].ReadOnly = true;*/
-
                     calValues();
 
                     txtProdName.Text = "";
@@ -718,9 +816,10 @@ namespace prjGrow.StockInfo
             }
             return false;
         }
-        
+
         private void btnSave_Click(object sender, EventArgs e)
         {
+            isOrder = chkOrder.Checked;
             if (btnSave.Text == Constants.btn_cnc)
             {
                 tmr.Stop();
@@ -735,20 +834,11 @@ namespace prjGrow.StockInfo
             }
             else if (btnSave.Text == Constants.btn_save)
             {
-                saveBill();
+                if (isOrder)
+                    saveOrder();
+                else
+                    saveSale();
             }
-        }
-
-        private void cmbBank_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cmbBank.SelectedIndex < 0 || loading || cmbBank.SelectedValue == null)
-                return;
-            txtAccno.Text = bnk.bankAccNo(Convert.ToInt64(cmbBank.SelectedValue.ToString()));
-        }
-        
-        private void cmbBank_TextChanged(object sender, EventArgs e)
-        {
-            if (cmbBank.Text == "") txtAccno.Text = "";
         }
 
         private void rbWhole_CheckedChanged(object sender, EventArgs e)
@@ -760,9 +850,7 @@ namespace prjGrow.StockInfo
 
         private void btnBank_Click(object sender, EventArgs e)
         {
-            frmBank bank = new frmBank();
-            bank.ShowDialog();
-            loadBanks();
+            
         }
 
         private void txtProdName_TextChanged(object sender, EventArgs e)
@@ -781,7 +869,7 @@ namespace prjGrow.StockInfo
             else
                 com.filterData(txtProdName.Text, Product.col_prod_name, dgvData, sale.tblProducts);
         }
-        
+
         private void numDiscount_ValueChanged(object sender, EventArgs e)
         {
             calValues();
@@ -825,7 +913,7 @@ namespace prjGrow.StockInfo
             if (btnDeliver.Enabled)
                 clearDeliver();
         }
-        
+
         private void dgvData_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             if (!dgvData.Columns["Remove"].Visible)
@@ -838,39 +926,17 @@ namespace prjGrow.StockInfo
                 cusDisplay();
             }
         }
-        
+
         private void txtProdCode_MouseUp(object sender, MouseEventArgs e)
         {
             txtProdCode.Text = "";
         }
 
-        private void cmbClient_Leave(object sender, EventArgs e)
-        {
-            if (cmbClient.Text == "")
-                cmbClient.SelectedIndex = -1;
-        }
-
-        private void cmbBank_Leave(object sender, EventArgs e)
-        {
-            if (cmbBank.Text == "")
-            {
-                cmbBank.SelectedIndex = -1;
-                lblPaid.Text = "Paid as Cash";
-            }
-            else
-            {
-                lblPaid.Text = "Paid to Bank";
-            }
-        }
-
-        private void cmbClient_TextChanged(object sender, EventArgs e)
-        {
-            if (cmbClient.Text == "")
-            {
-                numClientBal.Value = 0;
-                cmbClient.SelectedIndex = -1;
-            }
-        }
+        //private void cmbCus_Leave(object sender, EventArgs e)
+        //{
+        //    if (cmbCus.Text == "")
+        //        cmbCus.SelectedIndex = -1;
+        //}
 
         private void btnReview_Click(object sender, EventArgs e)
         {
@@ -897,28 +963,6 @@ namespace prjGrow.StockInfo
             //calValues();
         }
 
-        private void cmbClient_SelectedValueChanged(object sender, EventArgs e)
-        {
-            if (loading || cmbClient.SelectedValue == null)
-                return;
-            if (Convert.ToInt64(cmbClient.SelectedValue.ToString()) < 0)
-                return;
-            sale.cus_id = Convert.ToInt64(cmbClient.SelectedValue.ToString());
-
-            if (Custom.mod_manufact || Custom.mod_bakers)
-            {
-                frmDeliver.indexChanged = true;
-                frmDeliver.cusId = sale.cus_id;
-                showDelivery();
-            }
-            if (Custom.mod_bakers && cmbClient.SelectedIndex >= 0 && numBillTotal.Value == numPaid.Value)
-            {
-                numPaid.Value = 0;
-            }
-            numClientBal.Value = Convert.ToInt64(tblCus.Rows[cmbClient.SelectedIndex][Customer.col_balance]);
-            calValues();
-        }
-
         private void btnProduct_Click(object sender, EventArgs e)
         {
             frmProducts frmProd = new frmProducts();
@@ -929,10 +973,7 @@ namespace prjGrow.StockInfo
 
         private void btnClient_Click(object sender, EventArgs e)
         {
-            frmCustomer frmCus = new frmCustomer();
-            frmCus.close_on_save = true;
-            frmCus.ShowDialog();
-            loadCustomers();
+            
         }
 
         private void txtProdCode_KeyDown(object sender, KeyEventArgs e)
@@ -980,25 +1021,6 @@ namespace prjGrow.StockInfo
         {
             showDelivery();
             calValues();
-        }
-
-        public void cusDisplay()
-        {
-            if (Custom.client_id_active != 2)
-                return;
-            if (!portCusDisplay.IsOpen)
-                return;
-            portCusDisplay.Open();
-            portCusDisplay.WriteLine((char)13 + "    Bill Total    ");
-            portCusDisplay.WriteLine((char)13 + "    PKR." +(numBillTotal.Value - numDiscount.Value) + ".00        ");
-            portCusDisplay.Close();
-        }
-
-        public void clearDisplay()
-        {
-      /*      portCusDisplay.Open();
-            portCusDisplay.WriteLine((char)12 + "");
-            portCusDisplay.Close();*/
         }
 
         private void dgvData_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -1053,7 +1075,7 @@ namespace prjGrow.StockInfo
         {
             this.Close();
         }
-        
+
         private void cmbVeh_SelectedValueChanged(object sender, EventArgs e)
         {
             loading = true;
@@ -1093,7 +1115,7 @@ namespace prjGrow.StockInfo
             pur.ShowDialog();
             loadProducts();
         }
-        
+
         private void btnSp1_Click(object sender, EventArgs e)
         {
             addProdtoCart(Constants.code_bag_sm);
@@ -1116,22 +1138,6 @@ namespace prjGrow.StockInfo
             }
         }
 
-        void saveBill()
-        {
-            calValues();
-            getData();
-            if (sale.saveSale())
-            {
-                stopTmr();
-                if (chkBill.Checked)
-                    sale.printBill();
-                loading = true;
-                clearAll();
-                loading = false;
-            }
-            com.showMessage(sale.msg, lblMsg, sale.msg_type, tmrMsg);
-        }
-
         private void lblCp_Click(object sender, EventArgs e)
         {
             lblCp.Hide();
@@ -1142,7 +1148,7 @@ namespace prjGrow.StockInfo
             if (btnSave.Text == "Ca&ncel" && tmrCount >= 1)
             {
                 numPaid.Enabled = false;
-                saveBill();
+                saveSale();
                 numPaid.Enabled = true;
                 tmr.Stop();
             }
@@ -1207,6 +1213,93 @@ namespace prjGrow.StockInfo
 
             if (dgvData.Columns[e.ColumnIndex].Name == Product.col_price && dgvData.Columns["Remove"].Visible && dgvData.Rows.Count > 0)
                 flipPrice(sale.tblCart.Rows.Count - e.RowIndex - 1);
+        }
+
+        private void chkOrder_CheckedChanged(object sender, EventArgs e)
+        {
+            flipOrder();
+        }
+
+        private void cmbCellNo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCus_Click(object sender, EventArgs e)
+        {
+            frmCustomer frmCus = new frmCustomer();
+            frmCus.close_on_save = true;
+            frmCus.ShowDialog();
+            loadCustomers();
+        }
+
+        private void btnBnk_Click(object sender, EventArgs e)
+        {
+            frmBank bank = new frmBank();
+            bank.ShowDialog();
+            loadBanks();
+        }
+
+        private void cmbCus_Leave(object sender, EventArgs e)
+        {
+            if (cmbCus.Text == "")
+                cmbCus.SelectedIndex = -1;
+        }
+
+        private void cmbBnk_Leave(object sender, EventArgs e)
+        {
+            if (cmbBnk.Text == "")
+            {
+                cmbBnk.SelectedIndex = -1;
+                lblPaid.Text = "Paid as Cash";
+            }
+            else
+            {
+                lblPaid.Text = "Paid to Bank";
+            }
+        }
+
+        private void cmbCus_TextChanged(object sender, EventArgs e)
+        {
+            if (cmbCus.Text == "")
+            {
+                numBal.Value = 0;
+                cmbCus.SelectedIndex = -1;
+            }
+        }
+
+        private void cmbCus_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (loading || cmbCus.SelectedValue == null)
+                return;
+            if (Convert.ToInt64(cmbCus.SelectedValue.ToString()) < 0)
+                return;
+            sale.cus_id = Convert.ToInt64(cmbCus.SelectedValue.ToString());
+
+            if (Custom.mod_manufact || Custom.mod_bakers)
+            {
+                frmDeliver.indexChanged = true;
+                frmDeliver.cusId = sale.cus_id;
+                showDelivery();
+            }
+            if (Custom.mod_bakers && cmbCus.SelectedIndex >= 0 && numBillTotal.Value == numPaid.Value)
+            {
+                numPaid.Value = 0;
+            }
+            numBal.Value = Convert.ToInt64(tblCus.Rows[cmbCus.SelectedIndex][Customer.col_balance]);
+            calValues();
+        }
+
+        private void txtDescrip_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (txtProdName.Text.Length < 6)    //to prevent from envoking if prod code scaned in prod name mistakenly
+                {
+                    btnSave_Click(sender, e);
+                    return;
+                }
+            }
         }
 
         #endregion

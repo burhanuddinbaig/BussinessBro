@@ -71,6 +71,8 @@ namespace prjGrow.Manufacture
         {
             prod.cateRaw = prod.catePartial = prod.multiCate = true;
             prod.term_id = rbFactory.Checked ? Constants.term_factory : Constants.term_store;
+            if (Custom.client_id_active == 9)
+                prod.term_id = 0;
             tblProd = prod.getProducts(true);
             com.loadCombo(cmbProd, tblProd, Product.col_prod_name, Product.col_prod_id);
         }
@@ -152,6 +154,7 @@ namespace prjGrow.Manufacture
         private void btnProd_Click(object sender, EventArgs e)
         {
             frmProducts frmProd = new frmProducts();
+            frmProd.defaultSelected = Constants.cate_raw;
             frmProd.ShowDialog();
             loadProd();
         }
